@@ -1,0 +1,52 @@
+# Local dev/test stack. Mirrors the production topology:
+#   db  ->  migrate (runs once)  ->  app (self-publishes today's batch at boot)
+# Open http://localhost:3000/?rashi=leo&user_id=test-user-1 after `docker compose up`.
+services:
+  db:
+    image: postgres:17-alpine
+    environment:
+      POSTGRES_USER: horoscope
+      POSTGRES_PASSWORD: horoscope
+      POSTGRES_DB: horoscope
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U horoscope -d horoscope"]
+      interval: 3s
+      timeout: 3s
+      retries: 15
+
+  # One-shot: applies pending migrations exactly once (node-pg-migrate keeps
+  # its own ledger in the pgmigrations table). Same pattern as the k8s Job.
+  migrate:
+    build: .
+    command: npm run migrate:up
+    environment:
+      DATABASE_URL: postgres://horoscope:horoscope@db:5432/horoscope
+    depends_on:
+      db:
+        condition: service_healthy
+
+  app:
+    build: .
+    environment:
+      DATABASE_URL: postgres://horoscope:horoscope@db:5432/horoscope
+      PORT: 3000
+      # GEMINI_API_KEY unset -> content comes from the config samples.
+      # Set it (and optionally GEMINI_MODEL) to exercise the real pipeline:
+      # GEMINI_API_KEY: your-key-here
+    ports:
+      - "3000:3000"
+    depends_on:
+      migrate:
+        condition: service_completed_successfully
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:3000/healthz"]
+      interval: 10s
+      timeout: 3s
+      retries: 5
+
+volumes:
+  pgdata:

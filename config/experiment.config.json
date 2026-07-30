@@ -1,0 +1,287 @@
+{
+  "experimentKey": "e1-daily-horoscope",
+  "defaultRashi": "aries",
+  "recentReadingDays": 3,
+
+  "rashis": [
+    { "key": "aries",       "name": "Aries",       "hindi": "Mesh",      "element": "Fire",  "dob": "Mar 21 - Apr 19", "image": "aries.jpg",       "sunSpan": { "start": 321,  "end": 419 } },
+    { "key": "taurus",      "name": "Taurus",      "hindi": "Vrishabh",  "element": "Earth", "dob": "Apr 20 - May 20", "image": "taurus.jpg",      "sunSpan": { "start": 420,  "end": 520 } },
+    { "key": "gemini",      "name": "Gemini",      "hindi": "Mithun",    "element": "Air",   "dob": "May 21 - Jun 20", "image": "gemini.jpg",      "sunSpan": { "start": 521,  "end": 620 } },
+    { "key": "cancer",      "name": "Cancer",      "hindi": "Kark",      "element": "Water", "dob": "Jun 21 - Jul 22", "image": "cancer.jpg",      "sunSpan": { "start": 621,  "end": 722 } },
+    { "key": "leo",         "name": "Leo",         "hindi": "Simha",     "element": "Fire",  "dob": "Jul 23 - Aug 22", "image": "leo.jpg",         "sunSpan": { "start": 723,  "end": 822 } },
+    { "key": "virgo",       "name": "Virgo",       "hindi": "Kanya",     "element": "Earth", "dob": "Aug 23 - Sep 22", "image": "virgo.jpg",       "sunSpan": { "start": 823,  "end": 922 } },
+    { "key": "libra",       "name": "Libra",       "hindi": "Tula",      "element": "Air",   "dob": "Sep 23 - Oct 22", "image": "libra.jpg",       "sunSpan": { "start": 923,  "end": 1022 } },
+    { "key": "scorpio",     "name": "Scorpio",     "hindi": "Vrishchik", "element": "Water", "dob": "Oct 23 - Nov 21", "image": "scorpio.jpg",     "sunSpan": { "start": 1023, "end": 1121 } },
+    { "key": "sagittarius", "name": "Sagittarius", "hindi": "Dhanu",     "element": "Fire",  "dob": "Nov 22 - Dec 21", "image": "sagittarius.jpg", "sunSpan": { "start": 1122, "end": 1221 } },
+    { "key": "capricorn",   "name": "Capricorn",   "hindi": "Makar",     "element": "Earth", "dob": "Dec 22 - Jan 19", "image": "capricorn.jpg",   "sunSpan": { "start": 1222, "end": 119 } },
+    { "key": "aquarius",    "name": "Aquarius",    "hindi": "Kumbh",     "element": "Air",   "dob": "Jan 20 - Feb 18", "image": "aquarius.jpg",    "sunSpan": { "start": 120,  "end": 218 } },
+    { "key": "pisces",      "name": "Pisces",      "hindi": "Meen",      "element": "Water", "dob": "Feb 19 - Mar 20", "image": "pisces.jpg",      "sunSpan": { "start": 219,  "end": 320 } }
+  ],
+
+  "moods": [
+    "Reflective", "Confident", "Energetic", "Focused", "Curious", "Calm",
+    "Ambitious", "Warm", "Bold", "Grounded", "Optimistic", "Playful",
+    "Spirited", "Steady", "Determined", "Hopeful"
+  ],
+
+  "colours": [
+    { "name": "Yellow",    "hex": "#F4C430" },
+    { "name": "Red",       "hex": "#D64545" },
+    { "name": "Blue",      "hex": "#3B6FB5" },
+    { "name": "Green",     "hex": "#3E9B63" },
+    { "name": "White",     "hex": "#EFEAE0" },
+    { "name": "Pink",      "hex": "#E5739B" },
+    { "name": "Orange",    "hex": "#E87A33" },
+    { "name": "Purple",    "hex": "#7B5AA6" },
+    { "name": "Gold",      "hex": "#C9962C" },
+    { "name": "Turquoise", "hex": "#2FA8A0" }
+  ],
+
+  "transits": {
+    "comment": "Tier A gochar lookup: effect of the transiting Sun / Moon by house position (1..12) counted from the user's rashi. Written once, reviewed with an astrologer; the LLM only phrases these tags. Domain weights are -1 / 0 / +1 and sum into the day's strong/neutral/weak statuses.",
+    "sunHouse": {
+      "1":  { "themes": ["the Sun crosses your own sign, focus turns to your own goals", "confidence is high but the ego should stay soft", "body heat is up, water and rest matter"], "domains": { "health": -1 } },
+      "2":  { "themes": ["family matters ask for gentle words", "spending wants watching, keep it planned"], "domains": { "money": -1 } },
+      "3":  { "themes": ["courage rises, bold steps at work pay off", "short trips and paperwork go well", "younger people bring support"], "domains": { "career": 1, "travel": 1 } },
+      "4":  { "themes": ["home and family pull your attention", "comfort and rest matter more than hustle today"], "domains": { "love": -1, "health": -1 } },
+      "5":  { "themes": ["creative work and studies ask for patience", "speak gently with loved ones"], "domains": { "love": -1 } },
+      "6":  { "themes": ["daily work flows, small hurdles clear away", "good day to finish pending chores", "body feels able"], "domains": { "career": 1, "health": 1 } },
+      "7":  { "themes": ["partners and close ones need soft handling", "listen first, answer later"], "domains": { "love": -1, "travel": -1 } },
+      "8":  { "themes": ["keep the day slow and simple", "avoid rush, late nights and heavy food"], "domains": { "health": -1, "travel": -1 } },
+      "9":  { "themes": ["duty toward elders and teachers comes up", "long plans need one more careful look"], "domains": {} },
+      "10": { "themes": ["work shines, seniors take notice", "a good day for effort that shows"], "domains": { "career": 1, "money": 1 } },
+      "11": { "themes": ["gains flow in, friends bring cheer", "old efforts pay a little back"], "domains": { "money": 1, "love": 1 } },
+      "12": { "themes": ["a quiet day suits you, expenses need care", "rest and early sleep repay you"], "domains": { "money": -1, "health": -1 } }
+    },
+    "moonHouse": {
+      "1":  { "themes": ["the Moon crosses your sign, the mind feels fresh and open", "feelings are strong, use them kindly"], "domains": { "love": 1, "health": 1 } },
+      "2":  { "themes": ["the mind rests on family, food and small comforts"], "domains": {} },
+      "3":  { "themes": ["courage is up, small wins come quickly", "short errands finish smoothly"], "domains": { "career": 1, "travel": 1 } },
+      "4":  { "themes": ["the heart wants home and quiet", "emotions sit close to the surface"], "domains": { "love": -1, "health": -1 } },
+      "5":  { "themes": ["feelings run a little deep, choose calm over drama"], "domains": {} },
+      "6":  { "themes": ["small problems clear away", "routine work feels lighter than usual"], "domains": { "career": 1, "health": 1 } },
+      "7":  { "themes": ["a good day for partners, meetings and open talk"], "domains": { "love": 1, "travel": 1 } },
+      "8":  { "themes": ["keep the day light and simple", "avoid rush and heavy commitments"], "domains": { "health": -1, "travel": -1 } },
+      "9":  { "themes": ["luck favours learning, elders and long plans"], "domains": { "travel": 1 } },
+      "10": { "themes": ["work gets the mind's full attention and it shows"], "domains": { "career": 1, "money": 1 } },
+      "11": { "themes": ["gains and good news reach you through friends"], "domains": { "money": 1, "love": 1 } },
+      "12": { "themes": ["a soft, inward day, spend and speak gently"], "domains": { "money": -1, "health": -1 } }
+    }
+  },
+
+  "bannedWords": [
+    "death", "dies", "dying", "dead", "illness", "disease", "accident",
+    "court case", "jail", "lawsuit", "divorce", "pregnant", "pregnancy",
+    "zaroor", "pakka", "100%", "nishchit", "beware", "danger", "dangerous",
+    "warning", "khatra", "saavdhan", "nuksan", "doom", "curse", "tragedy"
+  ],
+
+  "consultTarget": {
+    "deeplink": "astrolokal://consult/chat"
+  },
+
+  "nav": {
+    "comment": "Back button: history.back() when there is history, otherwise this deeplink hands control back to the app shell. Per product decision the closing CTA performs the same back action (the app shell owns astrologer routing); consultTarget.deeplink is only the no-history fallback for the CTA.",
+    "backDeeplink": "astrolokal://home"
+  },
+
+  "astrologer": {
+    "name": "Pandit ji",
+    "avatarUrl": "/astrologer.png"
+  },
+
+  "copy": {
+    "header": { "title": "Daily Horoscope", "brand": "AstroLokal", "pageTitle": "Your Daily Horoscope" },
+    "mood": { "label": "Mood" },
+    "lucky": { "number": "Lucky Number", "time": "Lucky Time", "colours": "Lucky Colours" },
+    "selector": { "title": "Choose your rashi", "hint": "See the reading for any rashi", "change": "Not your Rashi? Tap to change" },
+    "reading": { "title": "Today's Reading" },
+    "insights": {
+      "show": "View Detailed Horoscope",
+      "hide": "Hide Detailed Horoscope",
+      "domains": { "love": "Love", "career": "Career", "money": "Money", "health": "Health", "travel": "Travel" },
+      "statuses": { "strong": "Strong", "neutral": "Neutral", "weak": "Weak" }
+    },
+    "consult": {
+      "line": "Today's reading shows the surface. What it truly means for you, your kundli points to it clearly.",
+      "cta": "Talk to an Astrologer",
+      "online": "Online"
+    },
+    "error": {
+      "title": "Could not load today's reading",
+      "body": "Please check your connection and try again.",
+      "retry": "Try Again"
+    }
+  },
+
+  "sampleHoroscopes": {
+    "aries": {
+      "mood": "Energetic",
+      "lucky_number": 9,
+      "lucky_time": "10:30 AM",
+      "lucky_colours": ["Red", "Gold", "White"],
+      "today_reading": "Today, dear Aries, the day carries a bright and active energy for you. Work moves faster than usual, so pick up the task you kept waiting on and finish it first. Your body feels strong, and a morning walk will add to that strength. In matters of the heart, keep things simple and honest today. Money stays steady if you skip one impulse buy. The evening is right for rest and easy talk with family.",
+      "domain_insights": [
+        { "domain": "love",   "status": "neutral", "line": "Simple honest words keep the heart light today. Someone close is waiting to hear one small thing from you, say it before evening." },
+        { "domain": "career", "status": "strong",  "line": "The task you kept pushing aside opens the whole day once done. A senior notices your speed today, more than you think." },
+        { "domain": "money",  "status": "neutral", "line": "A steady day for money if you pause once. One impulse buy after lunch is the only test, watch what your hand reaches for." },
+        { "domain": "health", "status": "strong",  "line": "Your energy runs high from the morning itself. A brisk walk before breakfast unlocks more of it than tea or coffee will." },
+        { "domain": "travel", "status": "neutral", "line": "Short local trips pass smoothly today. The route you usually avoid may actually save you time, try it once." }
+      ]
+    },
+    "taurus": {
+      "mood": "Steady",
+      "lucky_number": 24,
+      "lucky_time": "4:00 PM",
+      "lucky_colours": ["Green", "White", "Blue"],
+      "today_reading": "Today, dear Taurus, the day asks you to move slowly and surely, the way you like it. Old efforts at work begin to show quiet results, so keep doing what you already do well. Money matters look calm, and a small saving made today will feel very good later. At home, someone may need your patient ear, and your calm nature will help them settle. Keep your meals light and your evening free for rest.",
+      "domain_insights": [
+        { "domain": "love",   "status": "strong",  "line": "Your patient ear pulls someone closer today. What they finally share this evening may explain many old silences." },
+        { "domain": "career", "status": "strong",  "line": "Old steady work begins to show quiet results. Watch who repeats your idea in the room today, it tells you something." },
+        { "domain": "money",  "status": "neutral", "line": "A small saving made today feels bigger later. Check one recurring expense tonight, one of them is quietly costing extra." },
+        { "domain": "health", "status": "neutral", "line": "Light meals and early rest keep you fresh. Your body will hint at what it needs around sunset, listen to it." },
+        { "domain": "travel", "status": "weak",    "line": "A slow day for travel, keep plans short. The trip you postpone today finds a better date on its own." }
+      ]
+    },
+    "gemini": {
+      "mood": "Curious",
+      "lucky_number": 15,
+      "lucky_time": "11:00 AM",
+      "lucky_colours": ["Yellow", "Turquoise", "White"],
+      "today_reading": "Today, dear Gemini, your mind is quick and full of questions, and that is your gift for the day. A talk with a friend or a senior can open a door you had not noticed before. Write your best ideas down before noon, because one of them is worth keeping. In love, a light and playful mood works better than a serious talk today. Spend a little time outdoors in the evening to settle your busy head.",
+      "domain_insights": [
+        { "domain": "love",   "status": "neutral", "line": "Keep it light and playful, skip the heavy talks. A joke shared before dinner may open a door that serious words could not." },
+        { "domain": "career", "status": "strong",  "line": "One conversation can open a new door today. The person you almost do not call is exactly the one to call first." },
+        { "domain": "money",  "status": "neutral", "line": "Note down your ideas as they come today. One of them has real value, and you will know which one by tomorrow." },
+        { "domain": "health", "status": "neutral", "line": "Evening air outdoors settles a busy mind. Ten quiet minutes without your phone will show you what the noise was hiding." },
+        { "domain": "travel", "status": "strong",  "line": "Short trips bring useful meetings today. Someone you cross on the way may carry news you have been waiting for." }
+      ]
+    },
+    "cancer": {
+      "mood": "Calm",
+      "lucky_number": 7,
+      "lucky_time": "7:30 PM",
+      "lucky_colours": ["White", "Blue", "Pink"],
+      "today_reading": "Today, dear Cancer, the day flows gently and your heart feels settled. Home is your source of strength now, so give the morning to the people who matter most. At work, quiet and careful effort will carry you further than loud moves. Someone may share a worry with you, and your soft answer will mean a lot to them. Keep dinner simple and sleep early tonight, your body will thank you tomorrow.",
+      "domain_insights": [
+        { "domain": "love",   "status": "strong",  "line": "Your soft answers mean a lot to someone today. One message you send before noon may be read many times over." },
+        { "domain": "career", "status": "neutral", "line": "Quiet careful effort beats loud moves today. Keep your best work half-shown for now, the right eyes find it soon." },
+        { "domain": "money",  "status": "neutral", "line": "No big money moves needed, let savings sit still. An offer that sounds urgent today is worth a second look tomorrow." },
+        { "domain": "health", "status": "strong",  "line": "A simple dinner and early sleep restore you fully. Notice how much lighter the morning feels after one early night." },
+        { "domain": "travel", "status": "neutral", "line": "Staying close to home suits the day. A short walk in your own lane may bring a face you did not expect." }
+      ]
+    },
+    "leo": {
+      "mood": "Confident",
+      "lucky_number": 31,
+      "lucky_time": "12:00 PM",
+      "lucky_colours": ["Gold", "Orange", "Red"],
+      "today_reading": "Today, dear Leo, you walk into the day with your natural shine, and people notice it. A piece of work you lead now can earn you real respect, so give it your full heart. Praise may come your way, accept it with a smile and share the credit too. In love, your warmth draws someone closer, let them feel it fully. Watch the afternoon for small spending, and the day stays a happy one.",
+      "domain_insights": [
+        { "domain": "love",   "status": "strong",  "line": "Your warmth draws someone closer today, show it fully. The first move you make before evening gets a bigger reply than expected." },
+        { "domain": "career", "status": "strong",  "line": "Lead with a full heart and respect follows today. One person watching quietly today matters more than the loud ones." },
+        { "domain": "money",  "status": "weak",    "line": "Spending runs light this afternoon, keep it small. Tonight, check where the small amounts went, the pattern will surprise you." },
+        { "domain": "health", "status": "neutral", "line": "Good energy holds if meals are on time today. The tiredness you feel at dusk is hunger wearing a mask." },
+        { "domain": "travel", "status": "neutral", "line": "A short evening outing lifts the mood. The place you keep saying you will visit is closer than you think." }
+      ]
+    },
+    "virgo": {
+      "mood": "Focused",
+      "lucky_number": 44,
+      "lucky_time": "9:00 AM",
+      "lucky_colours": ["Green", "White", "Yellow"],
+      "today_reading": "Today, dear Virgo, your eye for detail is sharper than ever, and it is exactly what the day needs. Clear one messy corner of your work in the morning and the rest of the day feels lighter. A money matter becomes simpler once you write the numbers down plainly. In love, do not measure everything, some things are better felt than checked. A calm walk after dinner will close the day well.",
+      "domain_insights": [
+        { "domain": "love",   "status": "neutral", "line": "Feel more and measure less today, hearts are not ledgers. One unplanned kind word will do what a week of care could not." },
+        { "domain": "career", "status": "strong",  "line": "Clear one messy corner early and the day opens up. What you find under that pending pile may change this week's plan." },
+        { "domain": "money",  "status": "strong",  "line": "Write the numbers down and the answer shows itself. One column you always skip is holding the real story today." },
+        { "domain": "health", "status": "neutral", "line": "An after-dinner walk settles the whole day. The thought that visits you on that walk deserves a second look." },
+        { "domain": "travel", "status": "neutral", "line": "A plain routine day, no travel push needed. Still, keep one bag half-ready, a short plan may form by the weekend." }
+      ]
+    },
+    "libra": {
+      "mood": "Warm",
+      "lucky_number": 6,
+      "lucky_time": "5:30 PM",
+      "lucky_colours": ["Pink", "White", "Blue"],
+      "today_reading": "Today, dear Libra, your gift for balance makes you the person everyone wants nearby. A small disagreement around you can settle quickly if you speak first, so do not wait. Work rewards teamwork today far more than solo effort, so lean into it warmly. In love, a kind gesture, even a small one, will be remembered for long. Give yourself a quiet hour in the evening, you have earned it fully.",
+      "domain_insights": [
+        { "domain": "love",   "status": "strong",  "line": "One kind gesture today is remembered for long. The person you least plan for is the one keeping count." },
+        { "domain": "career", "status": "strong",  "line": "Teamwork carries the day, invite others in. The quiet one on the team holds the idea you have been missing." },
+        { "domain": "money",  "status": "neutral", "line": "A balanced money day, neither push nor hold too hard. A fair deal shows up looking ordinary, look at it twice." },
+        { "domain": "health", "status": "neutral", "line": "A quiet evening hour restores your balance. Note which thought keeps returning in it, that one wants a decision." },
+        { "domain": "travel", "status": "neutral", "line": "Company makes any outing better today. The invite you almost decline could turn into the best hour of the day." }
+      ]
+    },
+    "scorpio": {
+      "mood": "Determined",
+      "lucky_number": 18,
+      "lucky_time": "8:00 AM",
+      "lucky_colours": ["Red", "Purple", "Turquoise"],
+      "today_reading": "Today, dear Scorpio, your will is iron and the day respects that kind of strength. Choose one goal and go at it fully, half effort is not your style anyway. Someone at work may test your patience, answer with calm and you win twice. Money grows where you stay consistent, not where you keep chasing. In love, open one small door you usually keep shut, a little trust will feel good today.",
+      "domain_insights": [
+        { "domain": "love",   "status": "neutral", "line": "Open one small door and a little trust feels good. What you keep guarding may already be safe with this person." },
+        { "domain": "career", "status": "strong",  "line": "One goal with full effort, the day respects it. The distraction that comes around midday is a test, not a chance." },
+        { "domain": "money",  "status": "strong",  "line": "Consistency grows money today, not chasing. The boring option you keep ignoring is quietly beating the exciting one." },
+        { "domain": "health", "status": "neutral", "line": "Strong drive today, balance it with real breaks. Your shoulders will tell you the truth your mind keeps skipping." },
+        { "domain": "travel", "status": "weak",    "line": "A quiet day for travel, keep journeys short. The delay that irritates you today may be doing you a quiet favour." }
+      ]
+    },
+    "sagittarius": {
+      "mood": "Optimistic",
+      "lucky_number": 3,
+      "lucky_time": "2:30 PM",
+      "lucky_colours": ["Yellow", "Orange", "Purple"],
+      "today_reading": "Today, dear Sagittarius, hope rises in you early and it colours the whole day well. A plan about learning or travel takes a real step forward, even a small booking counts. Share your big picture with someone senior, their one comment will sharpen it. In love, honesty spoken kindly deepens the bond, so say the true thing gently. Evening laughter with friends refills your spirit.",
+      "domain_insights": [
+        { "domain": "love",   "status": "strong",  "line": "Honest words said kindly deepen the bond today. The question you have been holding back finds a soft opening tonight." },
+        { "domain": "career", "status": "neutral", "line": "Share the big picture and let one comment sharpen it. The doubt someone raises today hides a genuinely useful clue." },
+        { "domain": "money",  "status": "neutral", "line": "Spend on learning today, it repays with time. The course or book you saved long ago is suddenly relevant again." },
+        { "domain": "health", "status": "strong",  "line": "Spirits run high and evening laughter refills you. Notice who makes you laugh the most, that company is medicine." },
+        { "domain": "travel", "status": "strong",  "line": "Travel plans take a real step forward today. A date that refused to fit may quietly fall into place by night." }
+      ]
+    },
+    "capricorn": {
+      "mood": "Grounded",
+      "lucky_number": 52,
+      "lucky_time": "6:00 PM",
+      "lucky_colours": ["Blue", "Green", "Gold"],
+      "today_reading": "Today, dear Capricorn, the day is built for quiet, solid progress, your favourite kind. A responsibility you carried without complaint starts earning silent respect. Keep your plan simple, three steps done fully beat ten steps half done. Money is best left in slow and safe places today, avoid quick schemes. At home, a few unhurried minutes with family will warm the whole evening.",
+      "domain_insights": [
+        { "domain": "love",   "status": "neutral", "line": "Unhurried minutes at home warm the evening. A small chore done without being asked will say more than words." },
+        { "domain": "career", "status": "strong",  "line": "Duties you carried quietly start earning respect. Someone senior mentions your name today in a room you are not in." },
+        { "domain": "money",  "status": "neutral", "line": "Slow and safe wins today, skip the quick schemes. The dull steady option in front of you has more in it than it shows." },
+        { "domain": "health", "status": "neutral", "line": "A steady day if you stretch between long sittings. Five minutes of stretching now saves the whole evening later." },
+        { "domain": "travel", "status": "weak",    "line": "Postpone long journeys if you easily can. The short errand nearby holds one small useful surprise today." }
+      ]
+    },
+    "aquarius": {
+      "mood": "Reflective",
+      "lucky_number": 11,
+      "lucky_time": "9:30 PM",
+      "lucky_colours": ["Turquoise", "Purple", "White"],
+      "today_reading": "Today, dear Aquarius, your thoughts run deeper than usual, and that depth is useful. An old idea you shelved deserves a second look, it may be ready now. At work, watch and listen more than you speak, the room will tell you things. A friend may seek your unusual way of seeing a problem, give them time. Late evening quiet, with a notebook nearby, will bring your best thought of the day.",
+      "domain_insights": [
+        { "domain": "love",   "status": "neutral", "line": "Give a listening ear and closeness grows quietly. What someone tells you today has a second meaning, it reaches you later." },
+        { "domain": "career", "status": "neutral", "line": "Watch and listen today, the room informs you. One sentence in a routine meeting is worth the whole day, catch it." },
+        { "domain": "money",  "status": "strong",  "line": "A shelved idea may be ready to earn now. Open that old note tonight and read it with today's eyes." },
+        { "domain": "health", "status": "neutral", "line": "Late quiet time clears the busy mind. Keep the last half hour screen-free and see what the mind hands you." },
+        { "domain": "travel", "status": "neutral", "line": "No travel push today, plans can wait a day or two. The pause is not a delay, something is still arranging itself." }
+      ]
+    },
+    "pisces": {
+      "mood": "Hopeful",
+      "lucky_number": 27,
+      "lucky_time": "7:00 AM",
+      "lucky_colours": ["White", "Turquoise", "Pink"],
+      "today_reading": "Today, dear Pisces, the day begins soft and hopeful, like early morning light on water. Your imagination is rich now, so give it one useful task and it will surprise you. Someone may need your comfort, and your few gentle words will be enough. Keep money matters simple today, just note what you spend and nothing more. A little music or prayer in the evening will leave your heart full.",
+      "domain_insights": [
+        { "domain": "love",   "status": "strong",  "line": "A few gentle words from you are enough today. The silence after them will carry more feeling than a long speech." },
+        { "domain": "career", "status": "neutral", "line": "Give your imagination one task and it will surprise you. The idea that feels too simple today is the one to write down." },
+        { "domain": "money",  "status": "neutral", "line": "Keep money simple today, just note what you spend. The note itself will show you one leak you never counted." },
+        { "domain": "health", "status": "strong",  "line": "Music or prayer at dusk leaves the heart full. The calm it brings tonight answers a question the day kept asking." },
+        { "domain": "travel", "status": "neutral", "line": "A gentle day, short familiar routes feel best. On a road you know well, one small detail waits to be noticed." }
+      ]
+    }
+  }
+}

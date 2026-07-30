@@ -1,0 +1,8 @@
+node_modules
+.git
+k8s
+docker-compose.yml
+README.md
+.env
+*.log
+.DS_Store

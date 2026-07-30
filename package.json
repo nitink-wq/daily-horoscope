@@ -1,0 +1,23 @@
+{
+  "name": "daily-horoscope",
+  "version": "0.1.0",
+  "private": true,
+  "description": "AstroLokal 'Daily Horoscope' (E1) — per-rashi daily reading retention surface (webview client + server-authoritative nightly content pipeline)",
+  "type": "module",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "node --watch src/server.js",
+    "migrate:up": "node-pg-migrate up",
+    "migrate:down": "node-pg-migrate down",
+    "migrate:create": "node-pg-migrate create --migration-file-language cjs",
+    "horoscope:generate": "node scripts/generate-daily-horoscope.js"
+  },
+  "dependencies": {
+    "express": "^5.1.0",
+    "node-pg-migrate": "^7.9.0",
+    "pg": "^8.13.1"
+  }
+}
