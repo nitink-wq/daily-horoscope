@@ -44,10 +44,12 @@ spec):
    tags and deterministic per-domain strong/neutral/weak statuses.
 3. Those `transit_facts` are the only astrological truth the Gemini prompt
    receives. It must copy the domain statuses verbatim.
-4. The pipeline validates hard (`src/config.js`): mood/colour/status enums,
-   380-450 char reading, 4-6 sentences, 60-char insight lines, banned-word and
-   fear-language lint, no em dashes, never all five domains weak, and a
-   near-duplicate check against the same rashi's last 3 readings.
+4. The pipeline validates what rendering and brand safety depend on
+   (`src/config.js`): mood/colour/status enums, statuses copied verbatim
+   from the transit facts, banned-word and fear-language lint, no em dashes,
+   never all five domains weak, and a near-duplicate check against the same
+   rashi's last 3 readings. Length and sentence-count targets are prompt
+   guidance only, never a hard failure.
 5. On failure it regenerates once, then falls back to yesterday's row, then to
    the config sample. Publishing never fails; stale beats broken.
 
