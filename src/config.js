@@ -15,21 +15,11 @@ const CONFIG_PATH =
 export const DOMAINS = ['love', 'career', 'money', 'health', 'travel'];
 export const STATUSES = ['strong', 'neutral', 'weak'];
 
-// The main reading is short on purpose: 2-4 sentences a tier-2/3 reader
-// finishes in one glance, like a real newspaper rashifal.
-const READING_MIN = 180;
-const READING_MAX = 300;
-const READING_SENTENCES_MIN = 2;
-const READING_SENTENCES_MAX = 4;
-// The consult question: one short curious question shown in the astrologer
-// nudge, tied to the day's reading but generic enough for anyone.
-const QUESTION_MIN = 30;
-const QUESTION_MAX = 90;
-// Domain insight lines are two short sentences: the day's state plus one
-// concrete hook that makes the reader curious. Long enough to feel personal,
-// short enough for a half-width card.
-const LINE_MIN = 60;
-const LINE_MAX = 110;
+// Length and sentence-count targets live ONLY in the Gemini prompt
+// (product decision): a line a few characters over must never cost a
+// generation attempt. The validator below enforces only what the page's
+// rendering depends on (enums, formats, statuses) and brand safety
+// (banned words, fear framing, dashes).
 
 // Word-boundary match for plain words; substring match for tokens with
 // non-word characters (e.g. "100%").
@@ -43,10 +33,6 @@ export function findBannedWord(cfg, text) {
     }
   }
   return null;
-}
-
-function sentenceCount(text) {
-  return (text.match(/[.!?](\s|$)/g) || []).length;
 }
 
 // Near-duplicate guard: word-set Jaccard similarity against recent readings.
@@ -88,22 +74,11 @@ export function validateHoroscope(h, cfg, label, opts = {}) {
     fail('lucky_colours must be exactly 3 distinct names from the fixed palette');
   }
 
-  if (typeof h.today_reading !== 'string') fail('today_reading required');
+  if (typeof h.today_reading !== 'string' || !h.today_reading.trim()) fail('today_reading required');
   const reading = h.today_reading.trim();
-  if (reading.length < READING_MIN || reading.length > READING_MAX) {
-    fail(`today_reading must be ${READING_MIN}-${READING_MAX} chars, got ${reading.length}`);
-  }
-  const sentences = sentenceCount(reading);
-  if (sentences < READING_SENTENCES_MIN || sentences > READING_SENTENCES_MAX) {
-    fail(`today_reading must be ${READING_SENTENCES_MIN}-${READING_SENTENCES_MAX} sentences, got ${sentences}`);
-  }
 
-  if (typeof h.consult_question !== 'string') fail('consult_question required');
+  if (typeof h.consult_question !== 'string' || !h.consult_question.trim()) fail('consult_question required');
   const question = h.consult_question.trim();
-  if (question.length < QUESTION_MIN || question.length > QUESTION_MAX) {
-    fail(`consult_question must be ${QUESTION_MIN}-${QUESTION_MAX} chars, got ${question.length}`);
-  }
-  if (!question.endsWith('?')) fail('consult_question must end with a question mark');
   if (/kundli|kundali|janampatri/i.test(question)) {
     fail('consult_question must not mention the kundli — keep it simple and curious');
   }
@@ -118,10 +93,6 @@ export function validateHoroscope(h, cfg, label, opts = {}) {
       fail(`domain_insights[${i}] status "${ins.status}" does not match the computed transit status "${opts.facts.domain_status[ins.domain]}"`);
     }
     if (typeof ins.line !== 'string' || !ins.line.trim()) fail(`domain_insights[${i}] line required`);
-    const line = ins.line.trim();
-    if (line.length < LINE_MIN || line.length > LINE_MAX) {
-      fail(`domain_insights[${i}] line must be ${LINE_MIN}-${LINE_MAX} chars, got ${line.length}`);
-    }
   });
   if (h.domain_insights.every((ins) => ins.status === 'weak')) {
     fail('all 5 domains weak — breaks the net-livable-day rule');
