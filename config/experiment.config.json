@@ -103,7 +103,7 @@
       "statuses": { "strong": "Strong", "neutral": "Neutral", "weak": "Weak" }
     },
     "consult": {
-      "line": "Today's reading shows the surface. What it truly means for you, your kundli points to it clearly.",
+      "line": "Today's reading is only the start. Want to know what the day is really hinting at?",
       "cta": "Talk to an Astrologer",
       "online": "Online"
     },
@@ -120,7 +120,8 @@
       "lucky_number": 9,
       "lucky_time": "10:30 AM",
       "lucky_colours": ["Red", "Gold", "White"],
-      "today_reading": "Today, dear Aries, the day carries a bright and active energy for you. Work moves faster than usual, so pick up the task you kept waiting on and finish it first. Your body feels strong, and a morning walk will add to that strength. In matters of the heart, keep things simple and honest today. Money stays steady if you skip one impulse buy. The evening is right for rest and easy talk with family.",
+      "today_reading": "Today, dear Aries, your energy is bright and work moves fast. Finish the task you kept waiting on and the day opens up for you. Keep the heart simple and honest, and skip one impulse buy. The evening turns light and easy with family.",
+      "consult_question": "Want to know which task will open your whole day?",
       "domain_insights": [
         { "domain": "love",   "status": "neutral", "line": "Simple honest words keep the heart light today. Someone close is waiting to hear one small thing from you, say it before evening." },
         { "domain": "career", "status": "strong",  "line": "The task you kept pushing aside opens the whole day once done. A senior notices your speed today, more than you think." },
@@ -134,7 +135,8 @@
       "lucky_number": 24,
       "lucky_time": "4:00 PM",
       "lucky_colours": ["Green", "White", "Blue"],
-      "today_reading": "Today, dear Taurus, the day asks you to move slowly and surely, the way you like it. Old efforts at work begin to show quiet results, so keep doing what you already do well. Money matters look calm, and a small saving made today will feel very good later. At home, someone may need your patient ear, and your calm nature will help them settle. Keep your meals light and your evening free for rest.",
+      "today_reading": "Today, dear Taurus, slow and steady wins the day, the way you like it. Old efforts at work begin to show quiet results. A small saving made now will feel very good later. Keep meals light and give someone at home your patient ear.",
+      "consult_question": "Curious which old effort of yours pays off first?",
       "domain_insights": [
         { "domain": "love",   "status": "strong",  "line": "Your patient ear pulls someone closer today. What they finally share this evening may explain many old silences." },
         { "domain": "career", "status": "strong",  "line": "Old steady work begins to show quiet results. Watch who repeats your idea in the room today, it tells you something." },
@@ -148,7 +150,8 @@
       "lucky_number": 15,
       "lucky_time": "11:00 AM",
       "lucky_colours": ["Yellow", "Turquoise", "White"],
-      "today_reading": "Today, dear Gemini, your mind is quick and full of questions, and that is your gift for the day. A talk with a friend or a senior can open a door you had not noticed before. Write your best ideas down before noon, because one of them is worth keeping. In love, a light and playful mood works better than a serious talk today. Spend a little time outdoors in the evening to settle your busy head.",
+      "today_reading": "Today, dear Gemini, your words carry extra charm. One conversation can open a new door, so speak up where it matters. Write your ideas down before noon, one of them is worth keeping. Evening air outdoors will settle your busy head.",
+      "consult_question": "Want to know which conversation opens your new door?",
       "domain_insights": [
         { "domain": "love",   "status": "neutral", "line": "Keep it light and playful, skip the heavy talks. A joke shared before dinner may open a door that serious words could not." },
         { "domain": "career", "status": "strong",  "line": "One conversation can open a new door today. The person you almost do not call is exactly the one to call first." },
@@ -162,7 +165,8 @@
       "lucky_number": 7,
       "lucky_time": "7:30 PM",
       "lucky_colours": ["White", "Blue", "Pink"],
-      "today_reading": "Today, dear Cancer, the day flows gently and your heart feels settled. Home is your source of strength now, so give the morning to the people who matter most. At work, quiet and careful effort will carry you further than loud moves. Someone may share a worry with you, and your soft answer will mean a lot to them. Keep dinner simple and sleep early tonight, your body will thank you tomorrow.",
+      "today_reading": "Today, dear Cancer, your soft nature is your strength. Quiet careful effort at work beats loud moves, and your gentle answers mean more than you know. Keep money still and stay close to home tonight, it suits the day.",
+      "consult_question": "Curious who values your soft words the most today?",
       "domain_insights": [
         { "domain": "love",   "status": "strong",  "line": "Your soft answers mean a lot to someone today. One message you send before noon may be read many times over." },
         { "domain": "career", "status": "neutral", "line": "Quiet careful effort beats loud moves today. Keep your best work half-shown for now, the right eyes find it soon." },
@@ -176,7 +180,8 @@
       "lucky_number": 31,
       "lucky_time": "12:00 PM",
       "lucky_colours": ["Gold", "Orange", "Red"],
-      "today_reading": "Today, dear Leo, you walk into the day with your natural shine, and people notice it. A piece of work you lead now can earn you real respect, so give it your full heart. Praise may come your way, accept it with a smile and share the credit too. In love, your warmth draws someone closer, let them feel it fully. Watch the afternoon for small spending, and the day stays a happy one.",
+      "today_reading": "Today, dear Leo, your warmth pulls people towards you. Lead with a full heart at work and respect follows on its own. Watch small spending in the afternoon and do not skip meals. A short evening outing lifts your mood.",
+      "consult_question": "Want to know who is quietly watching you today?",
       "domain_insights": [
         { "domain": "love",   "status": "strong",  "line": "Your warmth draws someone closer today, show it fully. The first move you make before evening gets a bigger reply than expected." },
         { "domain": "career", "status": "strong",  "line": "Lead with a full heart and respect follows today. One person watching quietly today matters more than the loud ones." },
@@ -190,7 +195,8 @@
       "lucky_number": 44,
       "lucky_time": "9:00 AM",
       "lucky_colours": ["Green", "White", "Yellow"],
-      "today_reading": "Today, dear Virgo, your eye for detail is sharper than ever, and it is exactly what the day needs. Clear one messy corner of your work in the morning and the rest of the day feels lighter. A money matter becomes simpler once you write the numbers down plainly. In love, do not measure everything, some things are better felt than checked. A calm walk after dinner will close the day well.",
+      "today_reading": "Today, dear Virgo, clarity is your gift. Clear one messy corner early and the whole day opens up. Write the numbers down and the money answer shows itself. In matters of the heart, feel more and measure less.",
+      "consult_question": "Curious what that messy corner has been hiding?",
       "domain_insights": [
         { "domain": "love",   "status": "neutral", "line": "Feel more and measure less today, hearts are not ledgers. One unplanned kind word will do what a week of care could not." },
         { "domain": "career", "status": "strong",  "line": "Clear one messy corner early and the day opens up. What you find under that pending pile may change this week's plan." },
@@ -204,7 +210,8 @@
       "lucky_number": 6,
       "lucky_time": "5:30 PM",
       "lucky_colours": ["Pink", "White", "Blue"],
-      "today_reading": "Today, dear Libra, your gift for balance makes you the person everyone wants nearby. A small disagreement around you can settle quickly if you speak first, so do not wait. Work rewards teamwork today far more than solo effort, so lean into it warmly. In love, a kind gesture, even a small one, will be remembered for long. Give yourself a quiet hour in the evening, you have earned it fully.",
+      "today_reading": "Today, dear Libra, balance comes easily to you. Teamwork carries the day, so invite others in and share the credit. One kind gesture will be remembered for long. A quiet evening hour brings your calm back.",
+      "consult_question": "Want to know who will remember your kindness longest?",
       "domain_insights": [
         { "domain": "love",   "status": "strong",  "line": "One kind gesture today is remembered for long. The person you least plan for is the one keeping count." },
         { "domain": "career", "status": "strong",  "line": "Teamwork carries the day, invite others in. The quiet one on the team holds the idea you have been missing." },
@@ -218,7 +225,8 @@
       "lucky_number": 18,
       "lucky_time": "8:00 AM",
       "lucky_colours": ["Red", "Purple", "Turquoise"],
-      "today_reading": "Today, dear Scorpio, your will is iron and the day respects that kind of strength. Choose one goal and go at it fully, half effort is not your style anyway. Someone at work may test your patience, answer with calm and you win twice. Money grows where you stay consistent, not where you keep chasing. In love, open one small door you usually keep shut, a little trust will feel good today.",
+      "today_reading": "Today, dear Scorpio, your focus runs deep. Pick one goal and give it full effort, the day respects it. Money grows through consistency today, not chasing. Keep journeys short and take real breaks between the push.",
+      "consult_question": "Curious which goal deserves your full push today?",
       "domain_insights": [
         { "domain": "love",   "status": "neutral", "line": "Open one small door and a little trust feels good. What you keep guarding may already be safe with this person." },
         { "domain": "career", "status": "strong",  "line": "One goal with full effort, the day respects it. The distraction that comes around midday is a test, not a chance." },
@@ -232,7 +240,8 @@
       "lucky_number": 3,
       "lucky_time": "2:30 PM",
       "lucky_colours": ["Yellow", "Orange", "Purple"],
-      "today_reading": "Today, dear Sagittarius, hope rises in you early and it colours the whole day well. A plan about learning or travel takes a real step forward, even a small booking counts. Share your big picture with someone senior, their one comment will sharpen it. In love, honesty spoken kindly deepens the bond, so say the true thing gently. Evening laughter with friends refills your spirit.",
+      "today_reading": "Today, dear Sagittarius, your spirits fly high. Share your big picture and let one honest comment sharpen it. Travel plans take a real step forward today. Spend on learning and laugh freely in the evening.",
+      "consult_question": "Want to know when your travel plan finally moves?",
       "domain_insights": [
         { "domain": "love",   "status": "strong",  "line": "Honest words said kindly deepen the bond today. The question you have been holding back finds a soft opening tonight." },
         { "domain": "career", "status": "neutral", "line": "Share the big picture and let one comment sharpen it. The doubt someone raises today hides a genuinely useful clue." },
@@ -246,7 +255,8 @@
       "lucky_number": 52,
       "lucky_time": "6:00 PM",
       "lucky_colours": ["Blue", "Green", "Gold"],
-      "today_reading": "Today, dear Capricorn, the day is built for quiet, solid progress, your favourite kind. A responsibility you carried without complaint starts earning silent respect. Keep your plan simple, three steps done fully beat ten steps half done. Money is best left in slow and safe places today, avoid quick schemes. At home, a few unhurried minutes with family will warm the whole evening.",
+      "today_reading": "Today, dear Capricorn, quiet duty starts paying back. The work you carried without noise is earning respect in rooms you do not see. Choose slow and safe over quick schemes today. Unhurried time at home warms the evening.",
+      "consult_question": "Curious where your name was mentioned today?",
       "domain_insights": [
         { "domain": "love",   "status": "neutral", "line": "Unhurried minutes at home warm the evening. A small chore done without being asked will say more than words." },
         { "domain": "career", "status": "strong",  "line": "Duties you carried quietly start earning respect. Someone senior mentions your name today in a room you are not in." },
@@ -260,7 +270,8 @@
       "lucky_number": 11,
       "lucky_time": "9:30 PM",
       "lucky_colours": ["Turquoise", "Purple", "White"],
-      "today_reading": "Today, dear Aquarius, your thoughts run deeper than usual, and that depth is useful. An old idea you shelved deserves a second look, it may be ready now. At work, watch and listen more than you speak, the room will tell you things. A friend may seek your unusual way of seeing a problem, give them time. Late evening quiet, with a notebook nearby, will bring your best thought of the day.",
+      "today_reading": "Today, dear Aquarius, watching and listening will serve you well. One sentence in a routine talk can be worth the whole day. A shelved idea may be ready to earn now, so open that old note tonight. Keep the late hours quiet.",
+      "consult_question": "Want to know which one sentence matters most today?",
       "domain_insights": [
         { "domain": "love",   "status": "neutral", "line": "Give a listening ear and closeness grows quietly. What someone tells you today has a second meaning, it reaches you later." },
         { "domain": "career", "status": "neutral", "line": "Watch and listen today, the room informs you. One sentence in a routine meeting is worth the whole day, catch it." },
@@ -274,7 +285,8 @@
       "lucky_number": 27,
       "lucky_time": "7:00 AM",
       "lucky_colours": ["White", "Turquoise", "Pink"],
-      "today_reading": "Today, dear Pisces, the day begins soft and hopeful, like early morning light on water. Your imagination is rich now, so give it one useful task and it will surprise you. Someone may need your comfort, and your few gentle words will be enough. Keep money matters simple today, just note what you spend and nothing more. A little music or prayer in the evening will leave your heart full.",
+      "today_reading": "Today, dear Pisces, your gentle heart leads the way. A few soft words from you will be enough where others need long speeches. Give your imagination one task and it will surprise you. Music or prayer at dusk leaves you full.",
+      "consult_question": "Curious what your calm evening is trying to tell you?",
       "domain_insights": [
         { "domain": "love",   "status": "strong",  "line": "A few gentle words from you are enough today. The silence after them will carry more feeling than a long speech." },
         { "domain": "career", "status": "neutral", "line": "Give your imagination one task and it will surprise you. The idea that feels too simple today is the one to write down." },

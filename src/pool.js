@@ -26,7 +26,8 @@ async function fetchRecentReadings(cfg, day, rashi) {
 
 async function fetchPreviousRow(day, rashi) {
   const { rows } = await query(
-    `SELECT mood, lucky_number, lucky_time, lucky_colours, today_reading, domain_insights
+    `SELECT mood, lucky_number, lucky_time, lucky_colours, today_reading,
+            consult_question, domain_insights
        FROM horoscopes WHERE rashi = $1 AND day < $2 ORDER BY day DESC LIMIT 1`,
     [rashi, day],
   );
@@ -84,11 +85,12 @@ export async function publishHoroscope(cfg, day, rashi, { force = false } = {}) 
     await client.query(
       `INSERT INTO horoscopes
          (day, rashi, mood, lucky_number, lucky_time, lucky_colours,
-          today_reading, domain_insights, transit_facts, source)
-       VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)`,
+          today_reading, consult_question, domain_insights, transit_facts, source)
+       VALUES ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11)`,
       [
         day, rashi, content.mood, content.lucky_number, content.lucky_time,
         JSON.stringify(content.lucky_colours), content.today_reading,
+        content.consult_question ?? null,
         JSON.stringify(content.domain_insights), JSON.stringify(facts), source,
       ],
     );
@@ -100,7 +102,7 @@ export async function publishHoroscope(cfg, day, rashi, { force = false } = {}) 
 export async function fetchHoroscope(day, rashi) {
   const { rows } = await query(
     `SELECT day, rashi, mood, lucky_number, lucky_time, lucky_colours,
-            today_reading, domain_insights, source
+            today_reading, consult_question, domain_insights, source
        FROM horoscopes WHERE day = $1 AND rashi = $2`,
     [day, rashi],
   );

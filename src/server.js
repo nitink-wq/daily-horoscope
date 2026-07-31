@@ -89,6 +89,9 @@ app.get('/api/horoscope', async (req, res) => {
         luckyTime: row.lucky_time,
         luckyColours: row.lucky_colours,
         todayReading: row.today_reading,
+        // Older rows predate this column; the client falls back to the
+        // static config line when it is null.
+        consultQuestion: row.consult_question || null,
         domainInsights: row.domain_insights,
       },
     });

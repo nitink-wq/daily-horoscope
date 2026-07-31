@@ -15,8 +15,16 @@ const CONFIG_PATH =
 export const DOMAINS = ['love', 'career', 'money', 'health', 'travel'];
 export const STATUSES = ['strong', 'neutral', 'weak'];
 
-const READING_MIN = 380;
-const READING_MAX = 450;
+// The main reading is short on purpose: 2-4 sentences a tier-2/3 reader
+// finishes in one glance, like a real newspaper rashifal.
+const READING_MIN = 180;
+const READING_MAX = 300;
+const READING_SENTENCES_MIN = 2;
+const READING_SENTENCES_MAX = 4;
+// The consult question: one short curious question shown in the astrologer
+// nudge, tied to the day's reading but generic enough for anyone.
+const QUESTION_MIN = 30;
+const QUESTION_MAX = 90;
 // Domain insight lines are two short sentences: the day's state plus one
 // concrete hook that makes the reader curious. Long enough to feel personal,
 // short enough for a half-width card.
@@ -86,7 +94,19 @@ export function validateHoroscope(h, cfg, label, opts = {}) {
     fail(`today_reading must be ${READING_MIN}-${READING_MAX} chars, got ${reading.length}`);
   }
   const sentences = sentenceCount(reading);
-  if (sentences < 4 || sentences > 6) fail(`today_reading must be 4-6 sentences, got ${sentences}`);
+  if (sentences < READING_SENTENCES_MIN || sentences > READING_SENTENCES_MAX) {
+    fail(`today_reading must be ${READING_SENTENCES_MIN}-${READING_SENTENCES_MAX} sentences, got ${sentences}`);
+  }
+
+  if (typeof h.consult_question !== 'string') fail('consult_question required');
+  const question = h.consult_question.trim();
+  if (question.length < QUESTION_MIN || question.length > QUESTION_MAX) {
+    fail(`consult_question must be ${QUESTION_MIN}-${QUESTION_MAX} chars, got ${question.length}`);
+  }
+  if (!question.endsWith('?')) fail('consult_question must end with a question mark');
+  if (/kundli|kundali|janampatri/i.test(question)) {
+    fail('consult_question must not mention the kundli — keep it simple and curious');
+  }
 
   if (!Array.isArray(h.domain_insights) || h.domain_insights.length !== DOMAINS.length) {
     fail(`domain_insights must hold exactly ${DOMAINS.length} entries`);
@@ -109,7 +129,7 @@ export function validateHoroscope(h, cfg, label, opts = {}) {
 
   // Valence + register lint over every user-visible string. Em/en dashes are
   // banned by the brand voice ("simple English, no em dashes").
-  const text = [reading, ...h.domain_insights.map((i) => i.line)].join(' ');
+  const text = [reading, question, ...h.domain_insights.map((i) => i.line)].join(' ');
   if (/[—–]/.test(text)) fail('em/en dash in copy — banned by the register');
   const hit = findBannedWord(cfg, text);
   if (hit) fail(`banned word "${hit}" in copy`);
@@ -120,6 +140,7 @@ export function validateHoroscope(h, cfg, label, opts = {}) {
     lucky_time: h.lucky_time,
     lucky_colours: h.lucky_colours,
     today_reading: reading,
+    consult_question: question,
     domain_insights: h.domain_insights.map((i) => ({
       domain: i.domain, status: i.status, line: i.line.trim(),
     })),

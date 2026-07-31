@@ -501,10 +501,13 @@
   function consultHtml(s) {
     var a = s.astrologer || {};
     var avatar = a.avatarUrl ? '<img src="' + esc(a.avatarUrl) + '" alt="">' : AVATAR;
+    // The bubble line is generated nightly with the reading; the config line
+    // is only the fallback for rows published before that field existed.
+    var line = s.horoscope.consultQuestion || fmt(s.copy.consult.line, { name: a.name || '' });
     return '<section class="consult">' +
       '<div class="astro">' +
         '<div class="avatar">' + avatar + '<span class="live"></span></div>' +
-        '<div class="bubble">' + esc(fmt(s.copy.consult.line, { name: a.name || '' })) +
+        '<div class="bubble">' + esc(line) +
           '<div class="typing"><i></i><i></i><i></i></div></div>' +
       '</div>' +
       '<button class="cta" id="ctaBtn">' + CHAT_ICON + esc(s.copy.consult.cta) + '</button>' +
