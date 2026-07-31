@@ -56,19 +56,13 @@
   h1, h2, h3, .serif { font-family: var(--serif); }
   .hidden { display: none !important; }
 
-  /* ---- nav: back button left, the brand centred --------------------------- */
+  /* ---- nav: just the brand badge, centred (no back button on this branch —
+     the app shell owns navigation; the CTA deeplinks to the HomeScreen) ---- */
   .nav {
-    display: grid; grid-template-columns: 38px 1fr 38px; align-items: center;
+    display: flex; justify-content: center; align-items: center;
     padding-top: calc(16px + env(safe-area-inset-top));
     padding-bottom: 10px;
   }
-  .nav .back {
-    width: 38px; height: 38px; border: 0; cursor: pointer; border-radius: 50%;
-    background: rgba(255, 255, 255, .8); box-shadow: 0 1px 4px rgba(122, 62, 30, .12);
-    display: flex; align-items: center; justify-content: center;
-  }
-  .nav .back:active { background: var(--sand); }
-  .nav .back svg { width: 19px; height: 19px; }
   /* The brand badge: logo + wordmark in a white pill, like the other
      AstroLokal surfaces. The pill centres in the nav grid. */
   .nav .brand { justify-self: center; display: flex; align-items: center; gap: 7px;
@@ -318,11 +312,7 @@
 <body>
 <div class="wrap">
   <div class="nav">
-    <button class="back" id="backBtn" aria-label="Back">
-      <svg viewBox="0 0 24 24" fill="none"><path d="M15 5l-7 7 7 7" stroke="#35200F" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    </button>
     <div class="brand"><img src="logo.png" alt=""><span class="word">AstroLokal</span></div>
-    <span></span>
   </div>
   <div id="main">
     <div class="skel" style="height:230px"></div>
@@ -408,15 +398,6 @@
     }
   }
 
-  // Back action: return the user where they came from. The closing CTA takes
-  // the same action by product decision — the app shell owns astrologer
-  // routing; the deeplink is only the fallback when the webview has no
-  // history of its own.
-  function goBack(fallback) {
-    if (history.length > 1) history.back();
-    else if (fallback) location.href = fallback;
-  }
-
   // The swap shimmer stays up for at least 600ms so a fast local fetch still
   // reads as "the content changed", then hands back a fully drawn page.
   function endSwap() {
@@ -500,9 +481,12 @@
     '</section>';
   }
 
+  // The CTA hands the user to the app shell's HomeScreen via deeplink
+  // (config consultTarget.deeplink). sendBeacon has already queued the tap
+  // event, so the navigation loses nothing.
   function ctaAction() {
     logEvent('cta_tap');
-    goBack(S && S.consultDeeplink);
+    if (S && S.consultDeeplink) location.href = S.consultDeeplink;
   }
 
   // The CTA lives at the end of the story. The sticky bar is the same button
@@ -628,10 +612,6 @@
       .then(render)
       .catch(function (err) { renderError(err.copy); });
   }
-
-  el('backBtn').onclick = function () {
-    goBack(S && S.nav && S.nav.backDeeplink);
-  };
 
   load();
 })();
