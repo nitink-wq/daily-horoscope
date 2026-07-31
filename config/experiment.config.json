@@ -77,7 +77,7 @@
   ],
 
   "consultTarget": {
-    "deeplink": "astrolokal://HomeScreen"
+    "deeplink": "astrolokal://Home"
   },
 
   "nav": {
