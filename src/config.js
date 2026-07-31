@@ -28,8 +28,8 @@ const QUESTION_MAX = 90;
 // Domain insight lines are two short sentences: the day's state plus one
 // concrete hook that makes the reader curious. Long enough to feel personal,
 // short enough for a half-width card.
-const LINE_MIN = 70;
-const LINE_MAX = 130;
+const LINE_MIN = 60;
+const LINE_MAX = 110;
 
 // Word-boundary match for plain words; substring match for tokens with
 // non-word characters (e.g. "100%").

@@ -38,13 +38,14 @@
   * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
   i { font-style: normal; }
   html { -webkit-text-size-adjust: 100%; }
-  /* Warm cream dawn wash — yellowish sand and gold, not pink; cards carry the page. */
+  /* Matches the E4 Fortune Card surface: a soft cream-to-peach wash with a
+     faint dot grid, flat and calm — the white cards carry the page. */
   body {
     font-family: var(--sans); color: var(--ink); min-height: 100vh;
-    background:
-      radial-gradient(90% 36% at 50% 0%, rgba(255, 235, 210, .95) 0%, rgba(255, 235, 210, 0) 70%),
-      radial-gradient(60% 30% at 100% 46%, rgba(255, 191, 110, .22) 0%, rgba(255, 191, 110, 0) 72%),
-      linear-gradient(180deg, #FFF1DC 0%, #FFF6E8 40%, #FFF9F1 100%);
+    background-image:
+      radial-gradient(rgba(203, 122, 74, .09) 1px, transparent 1.4px),
+      linear-gradient(180deg, #FFF6EC 0%, #FDEBDD 55%, #FBE3D3 100%);
+    background-size: 22px 22px, 100% 100%;
     background-attachment: fixed;
     display: flex; justify-content: center;
   }
@@ -68,115 +69,91 @@
   }
   .nav .back:active { background: var(--sand); }
   .nav .back svg { width: 19px; height: 19px; }
-  .nav .brand { display: flex; align-items: center; justify-content: center; gap: 7px; }
-  .nav .brand img { width: 30px; height: 30px; display: block; }
-  .nav .word { font-family: var(--serif); font-weight: 700; font-size: 19px; letter-spacing: -.01em; }
-
-  /* ---- page title + date line --------------------------------------------- */
-  .pageTitle { text-align: center; font-size: 21px; font-weight: 700; letter-spacing: -.01em; padding-top: 2px; }
-  .dateRow { display: flex; align-items: center; justify-content: center; padding: 5px 0 14px; }
-  .date { font-size: 14px; font-weight: 500; color: var(--ink-soft); }
-
-  /* ---- rashi selector card (below the hero) --------------------------------
-     A white rounded row: rashi art, name over DOB range, orange chevron —
-     with a "Not your Rashi?" helper line underneath. */
-  .selCard {
-    width: min(264px, 100%); display: flex; align-items: center; gap: 12px; border: 0; cursor: pointer;
-    text-align: left; font-family: var(--sans); margin: 16px auto 0;
-    background: var(--surface); border-radius: 999px; padding: 8px 16px 8px 9px;
-    box-shadow: var(--shadow);
+  /* The brand badge: logo + wordmark in a white pill, like the other
+     AstroLokal surfaces. The pill centres in the nav grid. */
+  .nav .brand { justify-self: center; display: flex; align-items: center; gap: 7px;
+    background: var(--surface); border-radius: 999px; padding: 6px 15px 6px 9px;
+    box-shadow: 0 2px 8px rgba(122, 62, 30, .1);
   }
-  .selCard:active { background: var(--cream); }
-  .selCard img { width: 52px; height: 52px; border-radius: 50%; object-fit: cover; flex: none; box-shadow: 0 0 0 2px #fff, 0 1px 5px rgba(122, 62, 30, .2); }
-  .selCard .sc { flex: 1; min-width: 0; }
-  .selCard .scName { display: block; font-size: 17px; font-weight: 700; white-space: nowrap; }
-  .selCard .scDob { display: block; font-size: 13px; font-weight: 500; color: var(--ink-soft); margin-top: 1px; white-space: nowrap; }
-  .selCard > svg { width: 18px; height: 18px; flex: none; color: var(--cta); }
-  .selHint { text-align: center; font-size: 14px; font-weight: 600; color: #A5731F; padding: 10px 0 0; }
+  .nav .brand img { width: 27px; height: 27px; display: block; }
+  .nav .word { font-family: var(--sans); font-weight: 700; font-size: 17px; letter-spacing: -.01em; color: #ED8433; }
+
+  /* ---- page title ----------------------------------------------------------
+     A small quiet caption tucked under the badge — present, not loud. */
+  .pageTitle {
+    text-align: center; font-family: var(--sans); font-size: 12.5px; font-weight: 600;
+    color: var(--ink-faint); letter-spacing: .04em; padding: 5px 0 12px;
+  }
 
   /* ---- rashi hero card ----------------------------------------------------
-     Sand-gold gradient, ~24px radius, corner-bracket ornament: four L-brackets
-     in the CTA orange inset ~16px, each with a solid dot at the bend. */
+     A clean white card, like the E4 streak card: medallion + identity on top,
+     one hairline divider, then the three lucky facts as columns — no inner
+     boxes, no ornament. */
   .hero {
-    position: relative; border-radius: 24px; padding: 22px 18px 18px;
-    background: linear-gradient(160deg, #FFE3BC 0%, var(--sand) 55%, #FFF4E3 100%);
+    position: relative; border-radius: 20px; padding: 15px 14px 13px;
+    background: var(--surface);
     box-shadow: var(--shadow);
   }
-  .hero .bkt { position: absolute; width: 14px; height: 14px; pointer-events: none; }
-  .hero .bkt::before { content: ""; position: absolute; inset: 0; border: 2px solid var(--cta); }
-  .hero .bkt::after {
-    content: ""; position: absolute; width: 4px; height: 4px; border-radius: 50%; background: var(--cta);
-  }
-  .hero .b1 { top: 16px; left: 16px; } .hero .b1::before { border-right: 0; border-bottom: 0; border-top-left-radius: 3px; } .hero .b1::after { top: -1px; left: -1px; }
-  .hero .b2 { top: 16px; right: 16px; } .hero .b2::before { border-left: 0; border-bottom: 0; border-top-right-radius: 3px; } .hero .b2::after { top: -1px; right: -1px; }
-  .hero .b3 { bottom: 16px; left: 16px; } .hero .b3::before { border-right: 0; border-top: 0; border-bottom-left-radius: 3px; } .hero .b3::after { bottom: -1px; left: -1px; }
-  .hero .b4 { bottom: 16px; right: 16px; } .hero .b4::before { border-left: 0; border-top: 0; border-bottom-right-radius: 3px; } .hero .b4::after { bottom: -1px; right: -1px; }
-
-  .heroTop { display: flex; align-items: center; gap: 14px; padding: 6px 8px 0; }
+  .heroTop { display: flex; align-items: center; gap: 12px; padding: 1px 2px 0; }
   /* the rashi artwork — the shared illustrated medallions, shown as a crest */
   .medal {
-    width: 86px; height: 86px; border-radius: 50%; overflow: hidden; flex: none;
-    box-shadow: 0 4px 12px rgba(122, 62, 30, .22), 0 0 0 3px #fff, 0 0 0 4.5px rgba(244, 87, 34, .35);
+    width: 66px; height: 66px; border-radius: 50%; overflow: hidden; flex: none;
+    box-shadow: 0 3px 10px rgba(122, 62, 30, .22), 0 0 0 2.5px #fff, 0 0 0 4px rgba(244, 87, 34, .35);
     background: #fff;
   }
   .medal img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .who { flex: 1; min-width: 0; }
-  .who h1 { font-size: 30px; font-weight: 700; color: var(--rust); letter-spacing: -.01em; line-height: 1.1; white-space: nowrap; }
-  .who .elem { font-size: 13.5px; font-weight: 600; color: var(--cta-soft); margin-top: 3px; }
-  .who .dob { font-size: 12px; font-weight: 500; color: var(--ink-soft); margin-top: 2px; white-space: nowrap; }
-  .moodCard {
-    flex: none; background: var(--surface); border-radius: 16px; padding: 12px 14px;
-    text-align: center; box-shadow: 0 3px 10px rgba(122, 62, 30, .12); min-width: 92px;
+  .who h1 { font-size: 25px; font-weight: 700; color: var(--rust); letter-spacing: -.01em; line-height: 1.1; white-space: nowrap; }
+  .who .elem { font-size: 12.5px; font-weight: 600; color: var(--cta-soft); margin-top: 2px; }
+  .who .dob { font-size: 11.5px; font-weight: 500; color: var(--ink-soft); margin-top: 2px; white-space: nowrap; }
+  /* the rashi dropdown, right in the hero: a white pill with an orange
+     chevron — the one obvious way to change rashi */
+  .chgBtn {
+    flex: none; display: flex; align-items: center; gap: 5px; border: 0; cursor: pointer;
+    font-family: var(--sans); font-size: 13px; font-weight: 700; color: var(--cta);
+    background: var(--surface); border-radius: 999px; padding: 10px 12px;
+    box-shadow: 0 0 0 1.5px rgba(244, 87, 34, .25), 0 2px 8px rgba(122, 62, 30, .12);
+    white-space: nowrap;
   }
-  .moodCard img { width: 32px; height: 32px; object-fit: contain; animation: moodFloat 2.8s ease-in-out infinite; }
-  @keyframes moodFloat {
-    0%, 100% { transform: translateY(0) rotate(0deg); }
-    35% { transform: translateY(-3px) rotate(-4deg); }
-    70% { transform: translateY(-1px) rotate(3deg); }
-  }
-  .moodCard .lbl {
-    font-size: 9.5px; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
-    color: var(--ink-faint); margin-top: 4px;
-  }
-  .moodCard .word { font-size: 15px; font-weight: 700; color: var(--ink); margin-top: 2px; }
+  .chgBtn:active { background: var(--cream); }
+  .chgBtn svg { width: 15px; height: 15px; }
 
   /* thin divider with three centred dots — decorative only */
-  .heroDiv { display: flex; align-items: center; gap: 7px; margin: 16px 6px 14px; }
+  .heroDiv { display: flex; align-items: center; gap: 7px; margin: 12px 4px 11px; }
   .heroDiv .line { flex: 1; height: 1px; background: rgba(244, 87, 34, .22); }
   .heroDiv i { width: 4px; height: 4px; border-radius: 50%; background: var(--cta-soft); }
   .heroDiv i:nth-child(3) { width: 5px; height: 5px; background: var(--cta); }
 
-  .luckyRow { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 9px; }
-  .lucky {
-    background: var(--surface); border-radius: 15px; padding: 12px 6px 10px; text-align: center;
-    box-shadow: 0 3px 10px rgba(122, 62, 30, .1);
-  }
-  .lucky .big { font-family: var(--serif); font-size: 24px; font-weight: 700; color: var(--cta); line-height: 1.15; }
-  .lucky .big.time { font-size: 17px; padding-top: 5px; }
-  .lucky .swatches { display: flex; justify-content: center; gap: 5px; padding: 7px 0 6px; }
-  .lucky .swatches i { width: 15px; height: 15px; border-radius: 50%; box-shadow: inset 0 0 0 1px rgba(53, 32, 15, .14); }
-  .lucky .lbl { font-size: 10.5px; font-weight: 600; color: var(--ink-soft); margin-top: 4px; line-height: 1.25; }
+  /* three columns inside the same white card, separated by hairlines */
+  .luckyRow { display: grid; grid-template-columns: 1fr 1fr 1fr; }
+  .lucky { padding: 2px 4px 0; text-align: center; }
+  .lucky + .lucky { border-left: 1px solid #F6E7D8; }
+  .lucky .big { font-family: var(--serif); font-size: 19px; font-weight: 700; color: var(--cta); line-height: 1.15; }
+  .lucky .big.time { font-size: 14.5px; padding-top: 4px; }
+  .lucky .swatches { display: flex; justify-content: center; gap: 4px; padding: 5px 0 4px; }
+  .lucky .swatches i { width: 12px; height: 12px; border-radius: 50%; box-shadow: inset 0 0 0 1px rgba(53, 32, 15, .14); }
+  .lucky .lbl { font-size: 10px; font-weight: 600; color: var(--ink-soft); margin-top: 3px; line-height: 1.25; }
 
   /* ---- today's reading ---------------------------------------------------- */
   .reading {
-    background: var(--surface); border-radius: 20px; padding: 18px; margin-top: 14px;
+    background: var(--surface); border-radius: 18px; padding: 15px 14px; margin-top: 12px;
     box-shadow: var(--shadow);
   }
-  .rHead { display: flex; align-items: center; gap: 9px; margin-bottom: 10px; }
-  .rHead img { width: 24px; height: 24px; flex: none; object-fit: contain; }
+  .rHead { display: flex; align-items: center; gap: 8px; margin-bottom: 8px; }
+  .rHead img { width: 22px; height: 22px; flex: none; object-fit: contain; }
   .rHead h2 {
-    font-size: 19px; font-weight: 700;
+    font-size: 17px; font-weight: 700;
     background: linear-gradient(90deg, #F45722 0%, #B0489B 90%);
     -webkit-background-clip: text; background-clip: text;
     -webkit-text-fill-color: transparent; color: #F45722;
   }
-  .reading p { font-size: 15.5px; line-height: 1.72; color: #4A382B; }
+  .reading p { font-size: 14.5px; line-height: 1.65; color: #4A382B; }
 
   /* ---- detailed insights (expand) ----------------------------------------- */
   .insToggle {
     width: 100%; display: flex; align-items: center; justify-content: center; gap: 7px;
-    border: 0; cursor: pointer; margin-top: 12px; padding: 14px;
-    font-family: var(--sans); font-size: 14.5px; font-weight: 700; color: var(--rust);
+    border: 0; cursor: pointer; margin-top: 10px; padding: 12px;
+    font-family: var(--sans); font-size: 14px; font-weight: 700; color: var(--rust);
     background: rgba(255, 255, 255, .7); border-radius: 16px;
     box-shadow: inset 0 0 0 1px rgba(244, 87, 34, .18);
   }
@@ -187,16 +164,16 @@
   /* Collapsed = a sneak peek: the top of the domain cards shows through a
      fade, the toggle sits below. Expanding animates max-height to the grid's
      real height (set from JS). */
-  .insWrap { position: relative; max-height: 96px; overflow: hidden; margin-top: 14px; transition: max-height .45s ease; }
+  .insWrap { position: relative; max-height: 96px; overflow: hidden; margin-top: 12px; transition: max-height .45s ease; }
   .insFade {
     position: absolute; left: 0; right: 0; bottom: 0; height: 68px; pointer-events: none;
-    background: linear-gradient(180deg, rgba(255, 248, 236, 0) 0%, #FFF8EC 84%);
+    background: linear-gradient(180deg, rgba(253, 235, 221, 0) 0%, #FDEBDD 84%);
     opacity: 1; transition: opacity .3s ease;
   }
   .insWrap.open .insFade { opacity: 0; }
-  .insGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 9px; }
+  .insGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
   .insGrid .dcard {
-    background: var(--surface); border-radius: 16px; padding: 13px 12px;
+    background: var(--surface); border-radius: 15px; padding: 12px 11px;
     box-shadow: 0 3px 10px rgba(122, 62, 30, .1);
   }
   .insGrid .dcard:last-child { grid-column: 1 / -1; }
@@ -211,7 +188,7 @@
     50% { transform: scale(1.18); }
   }
   @media (prefers-reduced-motion: reduce) {
-    .moodCard img, .dcard .dHead img, .astro .typing i { animation: none !important; }
+    .dcard .dHead img, .astro .typing i { animation: none !important; }
   }
   .dcard .dHead .name { font-size: 13.5px; font-weight: 700; flex: 1; }
   .dcard .status {
@@ -227,17 +204,17 @@
   /* ---- astrologer nudge (chat bubble) + the one CTA ------------------------
      Avatar with a live dot, a speech bubble with typing dots — reads as a
      conversation already waiting, not a banner. */
-  .consult { margin-top: 18px; }
-  .astro { display: flex; align-items: flex-start; gap: 12px; }
-  .astro .avatar { position: relative; width: 52px; height: 52px; flex: none; }
-  .astro .avatar svg, .astro .avatar img { width: 52px; height: 52px; border-radius: 50%; display: block; object-fit: cover; }
+  .consult { margin-top: 16px; }
+  .astro { display: flex; align-items: flex-start; gap: 11px; }
+  .astro .avatar { position: relative; width: 46px; height: 46px; flex: none; }
+  .astro .avatar svg, .astro .avatar img { width: 46px; height: 46px; border-radius: 50%; display: block; object-fit: cover; }
   .astro .avatar .live {
     position: absolute; right: 1px; bottom: 2px; width: 13px; height: 13px;
     border-radius: 50%; background: #2FBF57; box-shadow: 0 0 0 2.5px #FFF7F0;
   }
   .astro .bubble {
-    background: var(--sand); border-radius: 16px 16px 16px 6px; padding: 13px 15px;
-    font-size: 15px; font-weight: 500; line-height: 1.55; color: var(--ink);
+    background: var(--sand); border-radius: 16px 16px 16px 6px; padding: 12px 14px;
+    font-size: 14px; font-weight: 500; line-height: 1.55; color: var(--ink);
   }
   .astro .typing { display: flex; gap: 4px; margin-top: 8px; }
   .astro .typing i { width: 5px; height: 5px; border-radius: 50%; background: var(--gold); animation: blink 1.3s infinite; }
@@ -245,19 +222,19 @@
   .astro .typing i:nth-child(3) { animation-delay: .4s; }
   @keyframes blink { 0%, 60%, 100% { opacity: .3; } 30% { opacity: 1; } }
   .cta {
-    width: 100%; display: flex; align-items: center; justify-content: center; gap: 9px; margin-top: 16px;
-    border: 0; cursor: pointer; background: var(--cta); color: #fff; border-radius: 18px; padding: 17px;
-    font-family: var(--sans); font-size: 16.5px; font-weight: 700;
+    width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px; margin-top: 14px;
+    border: 0; cursor: pointer; background: var(--cta); color: #fff; border-radius: 16px; padding: 15px;
+    font-family: var(--sans); font-size: 15.5px; font-weight: 700;
     box-shadow: 0 10px 22px -8px rgba(244, 87, 34, .55);
   }
   .cta:active { background: var(--cta-soft); }
-  .cta svg { width: 20px; height: 20px; }
+  .cta svg { width: 19px; height: 19px; }
 
   /* the same CTA, re-offered as a sticky bar once the inline one scrolls away */
   .ctaBar {
     position: fixed; left: 0; right: 0; bottom: 0; z-index: 20; display: flex; justify-content: center;
     padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
-    background: linear-gradient(180deg, rgba(255, 249, 241, 0) 0%, #FFF9F1 46%);
+    background: linear-gradient(180deg, rgba(251, 227, 211, 0) 0%, #FBE3D3 46%);
     transform: translateY(110%); transition: transform .25s ease; pointer-events: none;
   }
   .ctaBar.show { transform: none; pointer-events: auto; }
@@ -310,6 +287,32 @@
   /* first-load skeleton, so a slow connection never shows a blank page */
   .skel { border-radius: 24px; margin-top: 14px; background: linear-gradient(100deg, #FBEBD3 40%, #FFF6E8 50%, #FBEBD3 60%); background-size: 200% 100%; animation: shimmer 1.2s infinite; }
   @keyframes shimmer { to { background-position: -200% 0; } }
+
+  /* Rashi swap: the old content dims and a light shimmer sweeps across while
+     the new rashi's page is fetched — nothing moves, just a soft "changing"
+     cue. The class lives on #main so it survives the innerHTML swap. */
+  #main { position: relative; }
+  #main.swapping { pointer-events: none; }
+  #main.swapping > * { opacity: .55; transition: opacity .2s ease; }
+  #main.swapping::after {
+    content: ""; position: absolute; inset: 0; z-index: 2; border-radius: 22px;
+    background: linear-gradient(100deg, rgba(255, 255, 255, 0) 35%, rgba(255, 255, 255, .8) 50%, rgba(255, 255, 255, 0) 65%);
+    background-size: 220% 100%; animation: shimmer 1s linear infinite;
+  }
+
+  /* ---- small phones (<= 360px wide) ---------------------------------------
+     Everything steps down one more notch so nothing feels cramped. */
+  @media (max-width: 360px) {
+    .wrap { padding-left: 12px; padding-right: 12px; }
+    .medal { width: 56px; height: 56px; }
+    .who h1 { font-size: 21px; }
+    .who .elem { font-size: 11.5px; }
+    .chgBtn { padding: 9px 10px; font-size: 12px; }
+    .lucky .big { font-size: 18px; }
+    .lucky .big.time { font-size: 13.5px; }
+    .reading p { font-size: 14px; }
+    .cta { font-size: 14.5px; padding: 14px; }
+  }
 </style>
 </head>
 <body>
@@ -345,13 +348,13 @@
   var rollTimer = null;
   var ctaWatch = null;    // IntersectionObserver driving the sticky CTA bar
   var viewLogged = false; // page_view fires once per open, not per rashi swap
+  var swapStart = 0;      // when the rashi-switch shimmer began
 
   var NET_COPY = { title: 'Connection problem', body: 'Please check your internet and try again.', retry: 'Try Again' };
 
   // ---- icons ---------------------------------------------------------------
   // Illustrated PNGs (transparent background) generated for this page and
   // shipped in public/icons/. Decorative — empty alt on every one.
-  var BALL_ICON = '<img src="icons/mood.png" alt="">';
   var BOOK_ICON = '<img src="icons/reading.png" alt="">';
   var CHEV = '<svg viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>';
   var CHAT_ICON = '<svg viewBox="0 0 24 24" fill="none"><path d="M21 12a8 8 0 01-8 8H7l-4 3v-5.5A8 8 0 1121 12z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>';
@@ -386,11 +389,6 @@
       });
     });
   }
-  // "Thursday, July 30" from the product-day key — plain English, no year.
-  function prettyDate(dayKey) {
-    var d = new Date(dayKey + 'T12:00:00+05:30');
-    return d.toLocaleDateString('en-US', { weekday: 'long', month: 'long', day: 'numeric' });
-  }
   function rashiInfo(s, key) {
     for (var i = 0; i < s.rashis.length; i++) if (s.rashis[i].key === key) return s.rashis[i];
     return s.rashis[0];
@@ -419,6 +417,15 @@
     else if (fallback) location.href = fallback;
   }
 
+  // The swap shimmer stays up for at least 600ms so a fast local fetch still
+  // reads as "the content changed", then hands back a fully drawn page.
+  function endSwap() {
+    var m = el('main');
+    if (!m.classList.contains('swapping')) return;
+    var wait = Math.max(0, 600 - (Date.now() - swapStart));
+    setTimeout(function () { m.classList.remove('swapping'); }, wait);
+  }
+
   // ---- render --------------------------------------------------------------
   function renderError(copy) {
     var c = copy || NET_COPY;
@@ -426,6 +433,7 @@
       (c.retry ? '<button id="retryBtn">' + esc(c.retry) + '</button>' : '') + '</div>';
     var btn = el('retryBtn');
     if (btn) btn.onclick = load;
+    endSwap();
   }
 
   function heroHtml(s) {
@@ -435,7 +443,6 @@
       return '<i style="background:' + esc(s.colours[name] || '#CCC') + '" title="' + esc(name) + '"></i>';
     }).join('');
     return '<section class="hero">' +
-      '<span class="bkt b1"></span><span class="bkt b2"></span><span class="bkt b3"></span><span class="bkt b4"></span>' +
       '<div class="heroTop">' +
         '<div class="medal"><img src="' + esc(r.image) + '" alt="' + esc(r.name) + '"></div>' +
         '<div class="who">' +
@@ -443,10 +450,11 @@
           '<div class="elem">' + esc(r.element) + ' Sign</div>' +
           '<div class="dob">' + esc(r.dob) + '</div>' +
         '</div>' +
-        '<div class="moodCard">' + BALL_ICON +
-          '<div class="lbl">' + esc(s.copy.mood.label) + '</div>' +
-          '<div class="word">' + esc(h.mood) + '</div>' +
-        '</div>' +
+        // The rashi dropdown lives right here in the hero — one tap opens
+        // the picker sheet.
+        '<button class="chgBtn" id="pillBtn">' +
+          esc((s.copy.selector && s.copy.selector.button) || 'Change Rashi') + CHEV +
+        '</button>' +
       '</div>' +
       '<div class="heroDiv"><span class="line"></span><i></i><i></i><i></i><span class="line"></span></div>' +
       '<div class="luckyRow">' +
@@ -455,28 +463,6 @@
         '<div class="lucky"><div class="swatches">' + swatches + '</div><div class="lbl">' + esc(s.copy.lucky.colours) + '</div></div>' +
       '</div>' +
     '</section>';
-  }
-
-  // "Mar 21 - Apr 19" -> "21 Mar to 19 Apr" (the selector card's format)
-  function dobTo(dob) {
-    var parts = String(dob).split(' - ');
-    if (parts.length !== 2) return dob;
-    var flip = function (p) {
-      var m = p.trim().split(' ');
-      return m.length === 2 ? m[1] + ' ' + m[0] : p;
-    };
-    return flip(parts[0]) + ' to ' + flip(parts[1]);
-  }
-
-  function selectorHtml(s, r) {
-    return '<button class="selCard" id="pillBtn">' +
-        '<img src="' + esc(r.image) + '" alt="">' +
-        '<span class="sc">' +
-          '<span class="scName">' + esc(r.name) + '</span>' +
-          '<span class="scDob">' + esc(dobTo(r.dob)) + '</span>' +
-        '</span>' + CHEV +
-      '</button>' +
-      '<div class="selHint">' + esc(s.copy.selector.change) + '</div>';
   }
 
   function insightsHtml(s) {
@@ -537,13 +523,10 @@
     S = s;
     RASHI = s.rashi;
     document.title = s.copy.header.title + ' — ' + s.copy.header.brand;
-    var r = rashiInfo(s, s.rashi);
 
     el('main').innerHTML =
       '<h1 class="pageTitle">' + esc(s.copy.header.pageTitle) + '</h1>' +
-      '<div class="dateRow"><span class="date">' + esc(prettyDate(s.day)) + '</span></div>' +
       heroHtml(s) +
-      selectorHtml(s, r) +
       '<section class="reading">' +
         '<div class="rHead">' + BOOK_ICON + '<h2>' + esc(s.copy.reading.title) + '</h2></div>' +
         '<p>' + esc(s.horoscope.todayReading) + '</p>' +
@@ -560,16 +543,18 @@
     if (!viewLogged) { viewLogged = true; logEvent('page_view'); }
     renderSheet(s);
     scheduleRollover(s);
+    endSwap();
   }
 
-  // Long rashi names (Sagittarius, Capricorn) must not run under the mood
-  // card — step the serif size down until the one-word name fits its column.
+  // Long rashi names (Sagittarius, Capricorn) must never overflow the hero —
+  // step the serif size down until the one-word name fits its column.
+  // Starts from the stylesheet size so media queries stay in charge.
   function fitName() {
     var h = el('main').querySelector('.who h1');
     if (!h) return;
-    var size = 30;
+    var size = Math.round(parseFloat(getComputedStyle(h).fontSize)) || 25;
     h.style.fontSize = size + 'px';
-    while (size > 15 && h.scrollWidth > h.clientWidth) {
+    while (size > 14 && h.scrollWidth > h.clientWidth) {
       size -= 1;
       h.style.fontSize = size + 'px';
     }
@@ -615,6 +600,8 @@
   function pickRashi(key) {
     closeSheet();
     if (key === RASHI) return;
+    swapStart = Date.now();
+    el('main').classList.add('swapping');
     RASHI = key;
     var qs = new URLSearchParams(location.search);
     qs.set('rashi', key);

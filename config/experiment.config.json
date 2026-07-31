@@ -94,7 +94,7 @@
     "header": { "title": "Daily Horoscope", "brand": "AstroLokal", "pageTitle": "Your Daily Horoscope" },
     "mood": { "label": "Mood" },
     "lucky": { "number": "Lucky Number", "time": "Lucky Time", "colours": "Lucky Colours" },
-    "selector": { "title": "Choose your rashi", "hint": "See the reading for any rashi", "change": "Not your Rashi? Tap to change" },
+    "selector": { "title": "Choose your rashi", "hint": "See the reading for any rashi", "button": "Change Rashi", "change": "Not your Rashi? Tap to change" },
     "reading": { "title": "Today's Reading" },
     "insights": {
       "show": "View Detailed Horoscope",
@@ -123,11 +123,11 @@
       "today_reading": "Today, dear Aries, your energy is bright and work moves fast. Finish the task you kept waiting on and the day opens up for you. Keep the heart simple and honest, and skip one impulse buy. The evening turns light and easy with family.",
       "consult_question": "Want to know which task will open your whole day?",
       "domain_insights": [
-        { "domain": "love",   "status": "neutral", "line": "Simple honest words keep the heart light today. Someone close is waiting to hear one small thing from you, say it before evening." },
-        { "domain": "career", "status": "strong",  "line": "The task you kept pushing aside opens the whole day once done. A senior notices your speed today, more than you think." },
-        { "domain": "money",  "status": "neutral", "line": "A steady day for money if you pause once. One impulse buy after lunch is the only test, watch what your hand reaches for." },
-        { "domain": "health", "status": "strong",  "line": "Your energy runs high from the morning itself. A brisk walk before breakfast unlocks more of it than tea or coffee will." },
-        { "domain": "travel", "status": "neutral", "line": "Short local trips pass smoothly today. The route you usually avoid may actually save you time, try it once." }
+        { "domain": "love",   "status": "neutral", "line": "Your stars keep love simple today. Say the one thing someone at home is waiting to hear." },
+        { "domain": "career", "status": "strong",  "line": "The day favours finishing old work. A senior will quietly notice your speed." },
+        { "domain": "money",  "status": "neutral", "line": "Your stars keep money steady today. Skip one impulse buy after lunch." },
+        { "domain": "health", "status": "strong",  "line": "The day gives your body good energy. A morning walk will add even more." },
+        { "domain": "travel", "status": "neutral", "line": "Short trips are smooth under today's stars. A new route may save you time." }
       ]
     },
     "taurus": {
@@ -138,11 +138,11 @@
       "today_reading": "Today, dear Taurus, slow and steady wins the day, the way you like it. Old efforts at work begin to show quiet results. A small saving made now will feel very good later. Keep meals light and give someone at home your patient ear.",
       "consult_question": "Curious which old effort of yours pays off first?",
       "domain_insights": [
-        { "domain": "love",   "status": "strong",  "line": "Your patient ear pulls someone closer today. What they finally share this evening may explain many old silences." },
-        { "domain": "career", "status": "strong",  "line": "Old steady work begins to show quiet results. Watch who repeats your idea in the room today, it tells you something." },
-        { "domain": "money",  "status": "neutral", "line": "A small saving made today feels bigger later. Check one recurring expense tonight, one of them is quietly costing extra." },
-        { "domain": "health", "status": "neutral", "line": "Light meals and early rest keep you fresh. Your body will hint at what it needs around sunset, listen to it." },
-        { "domain": "travel", "status": "weak",    "line": "A slow day for travel, keep plans short. The trip you postpone today finds a better date on its own." }
+        { "domain": "love",   "status": "strong",  "line": "Your stars favour patient listening today. Someone close may open an old feeling tonight." },
+        { "domain": "career", "status": "strong",  "line": "Your steady work gets quiet support from the stars. Note who repeats your idea today." },
+        { "domain": "money",  "status": "neutral", "line": "The day favours small savings. Check one recurring expense tonight." },
+        { "domain": "health", "status": "neutral", "line": "Your stars ask for light food and early rest. Listen to your body at sunset." },
+        { "domain": "travel", "status": "weak",    "line": "The stars keep travel slow today. A postponed trip will find a better date." }
       ]
     },
     "gemini": {
@@ -153,11 +153,11 @@
       "today_reading": "Today, dear Gemini, your words carry extra charm. One conversation can open a new door, so speak up where it matters. Write your ideas down before noon, one of them is worth keeping. Evening air outdoors will settle your busy head.",
       "consult_question": "Want to know which conversation opens your new door?",
       "domain_insights": [
-        { "domain": "love",   "status": "neutral", "line": "Keep it light and playful, skip the heavy talks. A joke shared before dinner may open a door that serious words could not." },
-        { "domain": "career", "status": "strong",  "line": "One conversation can open a new door today. The person you almost do not call is exactly the one to call first." },
-        { "domain": "money",  "status": "neutral", "line": "Note down your ideas as they come today. One of them has real value, and you will know which one by tomorrow." },
-        { "domain": "health", "status": "neutral", "line": "Evening air outdoors settles a busy mind. Ten quiet minutes without your phone will show you what the noise was hiding." },
-        { "domain": "travel", "status": "strong",  "line": "Short trips bring useful meetings today. Someone you cross on the way may carry news you have been waiting for." }
+        { "domain": "love",   "status": "neutral", "line": "Your stars keep love light and playful today. One shared joke may open a closed door." },
+        { "domain": "career", "status": "strong",  "line": "The day favours honest talk at work. Call the person you keep postponing." },
+        { "domain": "money",  "status": "neutral", "line": "Your stars bring useful ideas today. Write them down, one has real value." },
+        { "domain": "health", "status": "neutral", "line": "Evening air will calm your busy mind. Keep ten minutes away from the phone." },
+        { "domain": "travel", "status": "strong",  "line": "Short trips are lucky today. Someone on the way may carry good news." }
       ]
     },
     "cancer": {
@@ -168,11 +168,11 @@
       "today_reading": "Today, dear Cancer, your soft nature is your strength. Quiet careful effort at work beats loud moves, and your gentle answers mean more than you know. Keep money still and stay close to home tonight, it suits the day.",
       "consult_question": "Curious who values your soft words the most today?",
       "domain_insights": [
-        { "domain": "love",   "status": "strong",  "line": "Your soft answers mean a lot to someone today. One message you send before noon may be read many times over." },
-        { "domain": "career", "status": "neutral", "line": "Quiet careful effort beats loud moves today. Keep your best work half-shown for now, the right eyes find it soon." },
-        { "domain": "money",  "status": "neutral", "line": "No big money moves needed, let savings sit still. An offer that sounds urgent today is worth a second look tomorrow." },
-        { "domain": "health", "status": "strong",  "line": "A simple dinner and early sleep restore you fully. Notice how much lighter the morning feels after one early night." },
-        { "domain": "travel", "status": "neutral", "line": "Staying close to home suits the day. A short walk in your own lane may bring a face you did not expect." }
+        { "domain": "love",   "status": "strong",  "line": "Your soft words carry the Moon's blessing today. One message may be read many times." },
+        { "domain": "career", "status": "neutral", "line": "The stars favour quiet careful work today. The right eyes will find it soon." },
+        { "domain": "money",  "status": "neutral", "line": "Your stars ask money to rest today. An urgent offer can wait one more day." },
+        { "domain": "health", "status": "strong",  "line": "A simple dinner and early sleep will restore you. The morning will feel lighter." },
+        { "domain": "travel", "status": "neutral", "line": "The day favours staying close to home. A short walk may bring a known face." }
       ]
     },
     "leo": {
@@ -183,11 +183,11 @@
       "today_reading": "Today, dear Leo, your warmth pulls people towards you. Lead with a full heart at work and respect follows on its own. Watch small spending in the afternoon and do not skip meals. A short evening outing lifts your mood.",
       "consult_question": "Want to know who is quietly watching you today?",
       "domain_insights": [
-        { "domain": "love",   "status": "strong",  "line": "Your warmth draws someone closer today, show it fully. The first move you make before evening gets a bigger reply than expected." },
-        { "domain": "career", "status": "strong",  "line": "Lead with a full heart and respect follows today. One person watching quietly today matters more than the loud ones." },
-        { "domain": "money",  "status": "weak",    "line": "Spending runs light this afternoon, keep it small. Tonight, check where the small amounts went, the pattern will surprise you." },
-        { "domain": "health", "status": "neutral", "line": "Good energy holds if meals are on time today. The tiredness you feel at dusk is hunger wearing a mask." },
-        { "domain": "travel", "status": "neutral", "line": "A short evening outing lifts the mood. The place you keep saying you will visit is closer than you think." }
+        { "domain": "love",   "status": "strong",  "line": "Your warmth shines under today's stars. A small first move will get a big reply." },
+        { "domain": "career", "status": "strong",  "line": "The stars favour open-hearted leading today. One quiet watcher matters most." },
+        { "domain": "money",  "status": "weak",    "line": "Your stars keep afternoon spending light. Check where the small amounts go." },
+        { "domain": "health", "status": "neutral", "line": "The day gives good energy if meals stay on time. Dusk tiredness is mostly hunger." },
+        { "domain": "travel", "status": "neutral", "line": "A short evening outing is lucky today. That pending place is closer than you think." }
       ]
     },
     "virgo": {
@@ -198,11 +198,11 @@
       "today_reading": "Today, dear Virgo, clarity is your gift. Clear one messy corner early and the whole day opens up. Write the numbers down and the money answer shows itself. In matters of the heart, feel more and measure less.",
       "consult_question": "Curious what that messy corner has been hiding?",
       "domain_insights": [
-        { "domain": "love",   "status": "neutral", "line": "Feel more and measure less today, hearts are not ledgers. One unplanned kind word will do what a week of care could not." },
-        { "domain": "career", "status": "strong",  "line": "Clear one messy corner early and the day opens up. What you find under that pending pile may change this week's plan." },
-        { "domain": "money",  "status": "strong",  "line": "Write the numbers down and the answer shows itself. One column you always skip is holding the real story today." },
-        { "domain": "health", "status": "neutral", "line": "An after-dinner walk settles the whole day. The thought that visits you on that walk deserves a second look." },
-        { "domain": "travel", "status": "neutral", "line": "A plain routine day, no travel push needed. Still, keep one bag half-ready, a short plan may form by the weekend." }
+        { "domain": "love",   "status": "neutral", "line": "Your stars ask the heart to lead today. One unplanned kind word will do a lot." },
+        { "domain": "career", "status": "strong",  "line": "The day favours clearing one messy corner. That pending pile hides something useful." },
+        { "domain": "money",  "status": "strong",  "line": "Your stars reward written accounts today. One skipped column tells the real story." },
+        { "domain": "health", "status": "neutral", "line": "An after-dinner walk settles the day. Note the thought that visits you there." },
+        { "domain": "travel", "status": "neutral", "line": "The stars keep travel plain today. Still, a short weekend plan may form." }
       ]
     },
     "libra": {
@@ -213,11 +213,11 @@
       "today_reading": "Today, dear Libra, balance comes easily to you. Teamwork carries the day, so invite others in and share the credit. One kind gesture will be remembered for long. A quiet evening hour brings your calm back.",
       "consult_question": "Want to know who will remember your kindness longest?",
       "domain_insights": [
-        { "domain": "love",   "status": "strong",  "line": "One kind gesture today is remembered for long. The person you least plan for is the one keeping count." },
-        { "domain": "career", "status": "strong",  "line": "Teamwork carries the day, invite others in. The quiet one on the team holds the idea you have been missing." },
-        { "domain": "money",  "status": "neutral", "line": "A balanced money day, neither push nor hold too hard. A fair deal shows up looking ordinary, look at it twice." },
-        { "domain": "health", "status": "neutral", "line": "A quiet evening hour restores your balance. Note which thought keeps returning in it, that one wants a decision." },
-        { "domain": "travel", "status": "neutral", "line": "Company makes any outing better today. The invite you almost decline could turn into the best hour of the day." }
+        { "domain": "love",   "status": "strong",  "line": "Your kind gesture carries the stars' favour. Someone is quietly keeping count." },
+        { "domain": "career", "status": "strong",  "line": "The day favours working with others. The quiet one has the missing idea." },
+        { "domain": "money",  "status": "neutral", "line": "Your stars keep money balanced today. A fair deal may look very ordinary." },
+        { "domain": "health", "status": "neutral", "line": "A quiet evening hour restores your balance. One returning thought wants a decision." },
+        { "domain": "travel", "status": "neutral", "line": "The stars favour going out with company. The invite you almost decline may be the best part." }
       ]
     },
     "scorpio": {
@@ -228,11 +228,11 @@
       "today_reading": "Today, dear Scorpio, your focus runs deep. Pick one goal and give it full effort, the day respects it. Money grows through consistency today, not chasing. Keep journeys short and take real breaks between the push.",
       "consult_question": "Curious which goal deserves your full push today?",
       "domain_insights": [
-        { "domain": "love",   "status": "neutral", "line": "Open one small door and a little trust feels good. What you keep guarding may already be safe with this person." },
-        { "domain": "career", "status": "strong",  "line": "One goal with full effort, the day respects it. The distraction that comes around midday is a test, not a chance." },
-        { "domain": "money",  "status": "strong",  "line": "Consistency grows money today, not chasing. The boring option you keep ignoring is quietly beating the exciting one." },
-        { "domain": "health", "status": "neutral", "line": "Strong drive today, balance it with real breaks. Your shoulders will tell you the truth your mind keeps skipping." },
-        { "domain": "travel", "status": "weak",    "line": "A quiet day for travel, keep journeys short. The delay that irritates you today may be doing you a quiet favour." }
+        { "domain": "love",   "status": "neutral", "line": "Your stars favour a little trust today. What you guard may already be safe here." },
+        { "domain": "career", "status": "strong",  "line": "The day respects one goal and full effort. The midday distraction is only a test." },
+        { "domain": "money",  "status": "strong",  "line": "Your stars grow money through consistency. The boring option is quietly winning." },
+        { "domain": "health", "status": "neutral", "line": "Strong drive needs real breaks today. Your shoulders are telling the truth." },
+        { "domain": "travel", "status": "weak",    "line": "The stars keep travel short today. A small delay may be a quiet favour." }
       ]
     },
     "sagittarius": {
@@ -243,11 +243,11 @@
       "today_reading": "Today, dear Sagittarius, your spirits fly high. Share your big picture and let one honest comment sharpen it. Travel plans take a real step forward today. Spend on learning and laugh freely in the evening.",
       "consult_question": "Want to know when your travel plan finally moves?",
       "domain_insights": [
-        { "domain": "love",   "status": "strong",  "line": "Honest words said kindly deepen the bond today. The question you have been holding back finds a soft opening tonight." },
-        { "domain": "career", "status": "neutral", "line": "Share the big picture and let one comment sharpen it. The doubt someone raises today hides a genuinely useful clue." },
-        { "domain": "money",  "status": "neutral", "line": "Spend on learning today, it repays with time. The course or book you saved long ago is suddenly relevant again." },
-        { "domain": "health", "status": "strong",  "line": "Spirits run high and evening laughter refills you. Notice who makes you laugh the most, that company is medicine." },
-        { "domain": "travel", "status": "strong",  "line": "Travel plans take a real step forward today. A date that refused to fit may quietly fall into place by night." }
+        { "domain": "love",   "status": "strong",  "line": "Honest words carry the stars' blessing tonight. The bond will grow deeper." },
+        { "domain": "career", "status": "neutral", "line": "The day favours sharing your big picture. One doubt hides a useful clue." },
+        { "domain": "money",  "status": "neutral", "line": "Your stars reward spending on learning. That saved course is relevant again." },
+        { "domain": "health", "status": "strong",  "line": "Your spirits fly high under today's stars. Note who makes you laugh the most." },
+        { "domain": "travel", "status": "strong",  "line": "Travel plans move forward under today's stars. A stuck date may settle by night." }
       ]
     },
     "capricorn": {
@@ -258,11 +258,11 @@
       "today_reading": "Today, dear Capricorn, quiet duty starts paying back. The work you carried without noise is earning respect in rooms you do not see. Choose slow and safe over quick schemes today. Unhurried time at home warms the evening.",
       "consult_question": "Curious where your name was mentioned today?",
       "domain_insights": [
-        { "domain": "love",   "status": "neutral", "line": "Unhurried minutes at home warm the evening. A small chore done without being asked will say more than words." },
-        { "domain": "career", "status": "strong",  "line": "Duties you carried quietly start earning respect. Someone senior mentions your name today in a room you are not in." },
-        { "domain": "money",  "status": "neutral", "line": "Slow and safe wins today, skip the quick schemes. The dull steady option in front of you has more in it than it shows." },
-        { "domain": "health", "status": "neutral", "line": "A steady day if you stretch between long sittings. Five minutes of stretching now saves the whole evening later." },
-        { "domain": "travel", "status": "weak",    "line": "Postpone long journeys if you easily can. The short errand nearby holds one small useful surprise today." }
+        { "domain": "love",   "status": "neutral", "line": "Your stars warm the home this evening. One small chore will say a lot." },
+        { "domain": "career", "status": "strong",  "line": "Your quiet duty earns respect under today's stars. Your name comes up where you are not." },
+        { "domain": "money",  "status": "neutral", "line": "The stars favour slow and safe money today. The dull option holds more." },
+        { "domain": "health", "status": "neutral", "line": "Your stars ask you to stretch between long sittings. Five minutes now saves the evening." },
+        { "domain": "travel", "status": "weak",    "line": "The day favours short errands over long journeys. One nearby stop holds a small surprise." }
       ]
     },
     "aquarius": {
@@ -273,11 +273,11 @@
       "today_reading": "Today, dear Aquarius, watching and listening will serve you well. One sentence in a routine talk can be worth the whole day. A shelved idea may be ready to earn now, so open that old note tonight. Keep the late hours quiet.",
       "consult_question": "Want to know which one sentence matters most today?",
       "domain_insights": [
-        { "domain": "love",   "status": "neutral", "line": "Give a listening ear and closeness grows quietly. What someone tells you today has a second meaning, it reaches you later." },
-        { "domain": "career", "status": "neutral", "line": "Watch and listen today, the room informs you. One sentence in a routine meeting is worth the whole day, catch it." },
-        { "domain": "money",  "status": "strong",  "line": "A shelved idea may be ready to earn now. Open that old note tonight and read it with today's eyes." },
-        { "domain": "health", "status": "neutral", "line": "Late quiet time clears the busy mind. Keep the last half hour screen-free and see what the mind hands you." },
-        { "domain": "travel", "status": "neutral", "line": "No travel push today, plans can wait a day or two. The pause is not a delay, something is still arranging itself." }
+        { "domain": "love",   "status": "neutral", "line": "Your stars grow closeness through listening. Today's words carry a second meaning." },
+        { "domain": "career", "status": "neutral", "line": "The day asks you to watch and listen. One sentence is worth the whole day." },
+        { "domain": "money",  "status": "strong",  "line": "Your old idea is ready under today's stars. Open that note tonight." },
+        { "domain": "health", "status": "neutral", "line": "Late quiet time clears the mind. Keep the last half hour screen-free." },
+        { "domain": "travel", "status": "neutral", "line": "The stars ask travel to wait a little. Something is still arranging itself." }
       ]
     },
     "pisces": {
@@ -288,11 +288,11 @@
       "today_reading": "Today, dear Pisces, your gentle heart leads the way. A few soft words from you will be enough where others need long speeches. Give your imagination one task and it will surprise you. Music or prayer at dusk leaves you full.",
       "consult_question": "Curious what your calm evening is trying to tell you?",
       "domain_insights": [
-        { "domain": "love",   "status": "strong",  "line": "A few gentle words from you are enough today. The silence after them will carry more feeling than a long speech." },
-        { "domain": "career", "status": "neutral", "line": "Give your imagination one task and it will surprise you. The idea that feels too simple today is the one to write down." },
-        { "domain": "money",  "status": "neutral", "line": "Keep money simple today, just note what you spend. The note itself will show you one leak you never counted." },
-        { "domain": "health", "status": "strong",  "line": "Music or prayer at dusk leaves the heart full. The calm it brings tonight answers a question the day kept asking." },
-        { "domain": "travel", "status": "neutral", "line": "A gentle day, short familiar routes feel best. On a road you know well, one small detail waits to be noticed." }
+        { "domain": "love",   "status": "strong",  "line": "Your gentle words carry the Moon's softness. The silence after them says more." },
+        { "domain": "career", "status": "neutral", "line": "The stars favour your imagination today. Write the simple idea down." },
+        { "domain": "money",  "status": "neutral", "line": "Your stars keep money simple today. Note what you spend, it will show one leak." },
+        { "domain": "health", "status": "strong",  "line": "Music or prayer at dusk fills the heart. That calm answers today's question." },
+        { "domain": "travel", "status": "neutral", "line": "Known roads are lucky today. One small detail waits to be noticed." }
       ]
     }
   }

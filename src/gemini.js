@@ -23,11 +23,11 @@ const SCHEMA_EXAMPLE = `{
   "today_reading": "2-4 sentences, 180-300 characters, addresses the user by rashi name",
   "consult_question": "one short curious question, 30-90 chars, ends with ?",
   "domain_insights": [
-    { "domain": "love",   "status": "copy from domain_status", "line": "2 short sentences, 70-130 chars" },
-    { "domain": "career", "status": "copy from domain_status", "line": "2 short sentences, 70-130 chars" },
-    { "domain": "money",  "status": "copy from domain_status", "line": "2 short sentences, 70-130 chars" },
-    { "domain": "health", "status": "copy from domain_status", "line": "2 short sentences, 70-130 chars" },
-    { "domain": "travel", "status": "copy from domain_status", "line": "2 short sentences, 70-130 chars" }
+    { "domain": "love",   "status": "copy from domain_status", "line": "2 short sentences, 60-110 chars" },
+    { "domain": "career", "status": "copy from domain_status", "line": "2 short sentences, 60-110 chars" },
+    { "domain": "money",  "status": "copy from domain_status", "line": "2 short sentences, 60-110 chars" },
+    { "domain": "health", "status": "copy from domain_status", "line": "2 short sentences, 60-110 chars" },
+    { "domain": "travel", "status": "copy from domain_status", "line": "2 short sentences, 60-110 chars" }
   ]
 }`;
 
@@ -47,6 +47,14 @@ REGISTER: Simple everyday English, class-8 reading level, warm and grounded,
 never like a fortune cookie. Short words, short sentences, no idioms that
 need a dictionary. Familiar Indian words used in Indian English are welcome
 (pandit ji, puja). Never use an em dash or an en dash anywhere.
+Two rules that matter most for this reader:
+1. Every sentence must be a COMPLETE plain sentence that is understood in
+   one read. Never a vague fragment ("Energy high."), never an abstract
+   line people nod at without understanding ("Embrace the flow of change").
+2. Every line stays about astrology and the user's day. Tie it to the
+   stars, the day, or the rashi ("Your stars favour...", "The day is good
+   for...", "The Moon keeps your mind calm..."), never generic life advice
+   that could appear in any self-help book.
 
 HARD RULES:
 - Every claim in today_reading and domain_insights must trace back to the
@@ -74,7 +82,7 @@ HARD RULES:
   kundli, charts, or astrology terms. Never ask about banned themes.
   Example shapes: "Want to know which hour of today is truly yours?",
   "Curious who is quietly thinking of you today?".
-- domain_insights lines: 70 to 130 characters each, exactly two short
+- domain_insights lines: 60 to 110 characters each, exactly two short
   sentences, in this fixed order: love, career, money, health, travel.
   Sentence 1 states today's picture for that domain, drawn from the transit
   facts. Sentence 2 gives one concrete, specific hook that makes the user
