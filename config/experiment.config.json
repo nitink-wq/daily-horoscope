@@ -77,12 +77,12 @@
   ],
 
   "consultTarget": {
-    "deeplink": "astrolokal://Home"
+    "deeplink": "astrolokal://BottomTabs?screen=Home"
   },
 
   "nav": {
-    "comment": "Back button: history.back() when there is history, otherwise this deeplink hands control back to the app shell. Per product decision the closing CTA performs the same back action (the app shell owns astrologer routing); consultTarget.deeplink is only the no-history fallback for the CTA.",
-    "backDeeplink": "astrolokal://home"
+    "comment": "On this branch both the back button and the CTA deeplink straight to the app shell's Home tab.",
+    "backDeeplink": "astrolokal://BottomTabs?screen=Home"
   },
 
   "astrologer": {
