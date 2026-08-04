@@ -638,8 +638,10 @@
   }
 
   // The back button takes the same action as the CTA: GO_BACK to the app
-  // shell, deeplink fallback outside the app.
+  // shell, deeplink fallback outside the app. sendBeacon survives the
+  // navigation, so the event always lands.
   el('backBtn').onclick = function () {
+    logEvent('back_tap');
     goHome(S && S.nav && S.nav.backDeeplink);
   };
 

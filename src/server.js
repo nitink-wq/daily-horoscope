@@ -104,7 +104,7 @@ app.get('/api/horoscope', async (req, res) => {
 // Engagement events (page_view, rashi_switch, insights_expand, cta_tap).
 // Fire-and-forget from the client; every row carries content_version (the
 // date key) so engagement can later be cut by which day's copy batch it was.
-const EVENTS = new Set(['page_view', 'rashi_switch', 'insights_expand', 'cta_tap']);
+const EVENTS = new Set(['page_view', 'rashi_switch', 'insights_expand', 'back_tap', 'cta_tap']);
 app.post('/api/event', async (req, res) => {
   try {
     const event = String(req.body?.event || '');
