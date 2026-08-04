@@ -492,12 +492,25 @@
     '</section>';
   }
 
-  // The CTA hands the user to the app shell's HomeScreen via deeplink
-  // (config consultTarget.deeplink). sendBeacon has already queued the tap
-  // event, so the navigation loses nothing.
+  // Hand the user back to the app shell's Home tab. Inside the app's React
+  // Native WebView we post GO_BACK so the shell POPS this screen natively —
+  // a deeplink would PUSH a new Home instance on top, and the phone's back
+  // button would then return here (screen upon screen). The deeplink is
+  // only the fallback for when the page is opened outside the app.
+  function goHome(fallback) {
+    if (window.ReactNativeWebView) {
+      window.ReactNativeWebView.postMessage(JSON.stringify({ action: 'GO_BACK' }));
+      return;
+    }
+    if (fallback) location.href = fallback;
+    else history.back();
+  }
+
+  // sendBeacon has already queued the tap event, so navigating away loses
+  // nothing.
   function ctaAction() {
     logEvent('cta_tap');
-    if (S && S.consultDeeplink) location.href = S.consultDeeplink;
+    goHome(S && S.consultDeeplink);
   }
 
   // The CTA lives at the end of the story. The sticky bar is the same button
@@ -624,13 +637,10 @@
       .catch(function (err) { renderError(err.copy); });
   }
 
-  // The back button hands the user to the app shell's Home tab, same
-  // deeplink as the CTA; plain history.back() only if the payload has not
-  // arrived yet.
+  // The back button takes the same action as the CTA: GO_BACK to the app
+  // shell, deeplink fallback outside the app.
   el('backBtn').onclick = function () {
-    var link = S && S.nav && S.nav.backDeeplink;
-    if (link) location.href = link;
-    else history.back();
+    goHome(S && S.nav && S.nav.backDeeplink);
   };
 
   load();
