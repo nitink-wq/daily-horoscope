@@ -630,6 +630,8 @@
   }
 
   el('backBtn').onclick = function () {
+    // sendBeacon survives the navigation, so the event always lands.
+    logEvent('back_tap');
     goBack(S && S.nav && S.nav.backDeeplink);
   };
 
