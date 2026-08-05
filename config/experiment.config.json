@@ -103,7 +103,7 @@
       "statuses": { "strong": "Strong", "neutral": "Neutral", "weak": "Weak" }
     },
     "consult": {
-      "line": "Today's reading is only the start. Want to know what the day is really hinting at?",
+      "line": "Your day is holding something more than this reading. Ask and know what it is.",
       "cta": "Talk to an Astrologer",
       "online": "Online"
     },
@@ -121,7 +121,7 @@
       "lucky_time": "10:30 AM",
       "lucky_colours": ["Red", "Gold", "White"],
       "today_reading": "Today, dear Aries, your energy is bright and work moves fast. Finish the task you kept waiting on and the day opens up for you. Keep the heart simple and honest, and skip one impulse buy. The evening turns light and easy with family.",
-      "consult_question": "Want to know which task will open your whole day?",
+      "consult_question": "Your day is hiding one good chance. Ask and know what it is.",
       "domain_insights": [
         { "domain": "love",   "status": "neutral", "line": "Your stars keep love simple today. Say the one thing someone at home is waiting to hear." },
         { "domain": "career", "status": "strong",  "line": "The day favours finishing old work. A senior will quietly notice your speed." },
@@ -136,7 +136,7 @@
       "lucky_time": "4:00 PM",
       "lucky_colours": ["Green", "White", "Blue"],
       "today_reading": "Today, dear Taurus, slow and steady wins the day, the way you like it. Old efforts at work begin to show quiet results. A small saving made now will feel very good later. Keep meals light and give someone at home your patient ear.",
-      "consult_question": "Curious which old effort of yours pays off first?",
+      "consult_question": "Something slow is about to turn in your favour. Ask and know when.",
       "domain_insights": [
         { "domain": "love",   "status": "strong",  "line": "Your stars favour patient listening today. Someone close may open an old feeling tonight." },
         { "domain": "career", "status": "strong",  "line": "Your steady work gets quiet support from the stars. Note who repeats your idea today." },
@@ -151,7 +151,7 @@
       "lucky_time": "11:00 AM",
       "lucky_colours": ["Yellow", "Turquoise", "White"],
       "today_reading": "Today, dear Gemini, your words carry extra charm. One conversation can open a new door, so speak up where it matters. Write your ideas down before noon, one of them is worth keeping. Evening air outdoors will settle your busy head.",
-      "consult_question": "Want to know which conversation opens your new door?",
+      "consult_question": "One talk today can change things for you. Ask and know more.",
       "domain_insights": [
         { "domain": "love",   "status": "neutral", "line": "Your stars keep love light and playful today. One shared joke may open a closed door." },
         { "domain": "career", "status": "strong",  "line": "The day favours honest talk at work. Call the person you keep postponing." },
@@ -166,7 +166,7 @@
       "lucky_time": "7:30 PM",
       "lucky_colours": ["White", "Blue", "Pink"],
       "today_reading": "Today, dear Cancer, your soft nature is your strength. Quiet careful effort at work beats loud moves, and your gentle answers mean more than you know. Keep money still and stay close to home tonight, it suits the day.",
-      "consult_question": "Curious who values your soft words the most today?",
+      "consult_question": "Your day has a soft surprise waiting. Ask and know what it is.",
       "domain_insights": [
         { "domain": "love",   "status": "strong",  "line": "Your soft words carry the Moon's blessing today. One message may be read many times." },
         { "domain": "career", "status": "neutral", "line": "The stars favour quiet careful work today. The right eyes will find it soon." },
@@ -181,7 +181,7 @@
       "lucky_time": "12:00 PM",
       "lucky_colours": ["Gold", "Orange", "Red"],
       "today_reading": "Today, dear Leo, your warmth pulls people towards you. Lead with a full heart at work and respect follows on its own. Watch small spending in the afternoon and do not skip meals. A short evening outing lifts your mood.",
-      "consult_question": "Want to know who is quietly watching you today?",
+      "consult_question": "Today can bring you one big moment. Ask and know how to use it.",
       "domain_insights": [
         { "domain": "love",   "status": "strong",  "line": "Your warmth shines under today's stars. A small first move will get a big reply." },
         { "domain": "career", "status": "strong",  "line": "The stars favour open-hearted leading today. One quiet watcher matters most." },
@@ -196,7 +196,7 @@
       "lucky_time": "9:00 AM",
       "lucky_colours": ["Green", "White", "Yellow"],
       "today_reading": "Today, dear Virgo, clarity is your gift. Clear one messy corner early and the whole day opens up. Write the numbers down and the money answer shows itself. In matters of the heart, feel more and measure less.",
-      "consult_question": "Curious what that messy corner has been hiding?",
+      "consult_question": "One small change can open your whole day. Ask and know which one.",
       "domain_insights": [
         { "domain": "love",   "status": "neutral", "line": "Your stars ask the heart to lead today. One unplanned kind word will do a lot." },
         { "domain": "career", "status": "strong",  "line": "The day favours clearing one messy corner. That pending pile hides something useful." },
@@ -211,7 +211,7 @@
       "lucky_time": "5:30 PM",
       "lucky_colours": ["Pink", "White", "Blue"],
       "today_reading": "Today, dear Libra, balance comes easily to you. Teamwork carries the day, so invite others in and share the credit. One kind gesture will be remembered for long. A quiet evening hour brings your calm back.",
-      "consult_question": "Want to know who will remember your kindness longest?",
+      "consult_question": "Someone may bring you good news today. Ask and know more.",
       "domain_insights": [
         { "domain": "love",   "status": "strong",  "line": "Your kind gesture carries the stars' favour. Someone is quietly keeping count." },
         { "domain": "career", "status": "strong",  "line": "The day favours working with others. The quiet one has the missing idea." },
@@ -226,7 +226,7 @@
       "lucky_time": "8:00 AM",
       "lucky_colours": ["Red", "Purple", "Turquoise"],
       "today_reading": "Today, dear Scorpio, your focus runs deep. Pick one goal and give it full effort, the day respects it. Money grows through consistency today, not chasing. Keep journeys short and take real breaks between the push.",
-      "consult_question": "Curious which goal deserves your full push today?",
+      "consult_question": "Your hard work is close to paying off. Ask and know when.",
       "domain_insights": [
         { "domain": "love",   "status": "neutral", "line": "Your stars favour a little trust today. What you guard may already be safe here." },
         { "domain": "career", "status": "strong",  "line": "The day respects one goal and full effort. The midday distraction is only a test." },
@@ -241,7 +241,7 @@
       "lucky_time": "2:30 PM",
       "lucky_colours": ["Yellow", "Orange", "Purple"],
       "today_reading": "Today, dear Sagittarius, your spirits fly high. Share your big picture and let one honest comment sharpen it. Travel plans take a real step forward today. Spend on learning and laugh freely in the evening.",
-      "consult_question": "Want to know when your travel plan finally moves?",
+      "consult_question": "Your luck is moving today. Ask and know where it points.",
       "domain_insights": [
         { "domain": "love",   "status": "strong",  "line": "Honest words carry the stars' blessing tonight. The bond will grow deeper." },
         { "domain": "career", "status": "neutral", "line": "The day favours sharing your big picture. One doubt hides a useful clue." },
@@ -256,7 +256,7 @@
       "lucky_time": "6:00 PM",
       "lucky_colours": ["Blue", "Green", "Gold"],
       "today_reading": "Today, dear Capricorn, quiet duty starts paying back. The work you carried without noise is earning respect in rooms you do not see. Choose slow and safe over quick schemes today. Unhurried time at home warms the evening.",
-      "consult_question": "Curious where your name was mentioned today?",
+      "consult_question": "Your quiet work is being noticed. Ask and know more.",
       "domain_insights": [
         { "domain": "love",   "status": "neutral", "line": "Your stars warm the home this evening. One small chore will say a lot." },
         { "domain": "career", "status": "strong",  "line": "Your quiet duty earns respect under today's stars. Your name comes up where you are not." },
@@ -271,7 +271,7 @@
       "lucky_time": "9:30 PM",
       "lucky_colours": ["Turquoise", "Purple", "White"],
       "today_reading": "Today, dear Aquarius, watching and listening will serve you well. One sentence in a routine talk can be worth the whole day. A shelved idea may be ready to earn now, so open that old note tonight. Keep the late hours quiet.",
-      "consult_question": "Want to know which one sentence matters most today?",
+      "consult_question": "One idea of yours is ready to grow. Ask and know how.",
       "domain_insights": [
         { "domain": "love",   "status": "neutral", "line": "Your stars grow closeness through listening. Today's words carry a second meaning." },
         { "domain": "career", "status": "neutral", "line": "The day asks you to watch and listen. One sentence is worth the whole day." },
@@ -286,7 +286,7 @@
       "lucky_time": "7:00 AM",
       "lucky_colours": ["White", "Turquoise", "Pink"],
       "today_reading": "Today, dear Pisces, your gentle heart leads the way. A few soft words from you will be enough where others need long speeches. Give your imagination one task and it will surprise you. Music or prayer at dusk leaves you full.",
-      "consult_question": "Curious what your calm evening is trying to tell you?",
+      "consult_question": "Your heart is trying to tell you something. Ask and know what.",
       "domain_insights": [
         { "domain": "love",   "status": "strong",  "line": "Your gentle words carry the Moon's softness. The silence after them says more." },
         { "domain": "career", "status": "neutral", "line": "The stars favour your imagination today. Write the simple idea down." },
