@@ -21,7 +21,7 @@ const SCHEMA_EXAMPLE = `{
   "lucky_time": "12:00 PM",
   "lucky_colours": ["Purple", "Blue", "Red"],
   "today_reading": "2-4 sentences, 180-280 characters, addresses the user by rashi name",
-  "consult_question": "one short curious question, 30-80 chars, ends with ?",
+  "consult_question": "high-level tease + Ask and know nudge, 30-90 chars",
   "domain_insights": [
     { "domain": "love",   "status": "copy from domain_status", "line": "2 short sentences, 60-100 chars" },
     { "domain": "career", "status": "copy from domain_status", "line": "2 short sentences, 60-100 chars" },
@@ -86,13 +86,17 @@ HARD RULES:
   effects) and go a little deeper on those. Never try to cover all five
   domains in the reading; the domain_insights already do that. A reading
   about everything lands as a reading about nothing.
-- consult_question: ONE short question, 30-80 characters, ending with a
-  question mark. It ties to today's reading but stays generic enough for
-  anyone of this rashi: it teases what the day is hinting at (who, which,
-  when, what) so the reader wants to ask an astrologer. Never mention
-  kundli, charts, or astrology terms. Never ask about banned themes.
-  Example shapes: "Want to know which hour of today is truly yours?",
-  "Curious who is quietly thinking of you today?".
+- consult_question: a short nudge of one or two small sentences, about 30
+  to 90 characters total. Shape: first a HIGH-LEVEL tease about the day,
+  then a clear push to ask, ending with "Ask and know ...". Keep it high
+  level: about the day, luck, or what is coming. Never name a specific
+  thing from the reading (not "which paperwork", "which task", "which
+  person") — the specific answer is what the astrologer gives. Never
+  mention kundli, charts, or astrology terms. Never touch banned themes.
+  GOOD: "Your day is hiding one good chance. Ask and know what it is."
+  GOOD: "Something is about to turn in your favour. Ask and know when."
+  BAD: "Want to know which paperwork will bring you the best results?"
+  (too specific, and it only asks a question without pushing to ask)
 - domain_insights lines: 60 to 100 characters each, exactly two short
   sentences, in this fixed order: love, career, money, health, travel.
   Sentence 1 states today's picture for that domain, drawn from the transit
@@ -118,8 +122,8 @@ EXAMPLES (follow the GOOD shape, never the BAD):
 - insight line GOOD: "Money is steady today. If you feel like buying
   something suddenly, wait till tomorrow."
 - consult_question BAD: "What does your seventh house lord indicate?"
-- consult_question GOOD: "Want to know which work will go well for you
-  today?"
+- consult_question GOOD: "Your day is hiding one good chance. Ask and know
+  what it is."
 
 USER:
 Today's date: ${facts.date}
